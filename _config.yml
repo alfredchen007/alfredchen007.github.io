@@ -13,12 +13,13 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: JingChao # add your name
 author-img: chenjingchao.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+about-author: Male, Post-90, and Atypical Virgo. I've finished my undergraduate education at Dalian University of Technology and obtained master's degree at University of Science and Technology. Now I am living in Beijing, always hungry to keep learning. # add description
+
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
-social-github: artemsheludko # add your Github handle
+social-github: alfredchen007 # add your Github handle
 social-linkedin: # add your Linkedin handle
-social-email: # add your Email address
+social-email: chenjingchao@126.com # add your Email address
 
 # Disqus
 discus-identifier: mr-brown # add your discus identifier
