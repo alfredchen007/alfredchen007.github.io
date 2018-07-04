@@ -2,54 +2,49 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to Jingchao's Party! - Jingchao's party</title>
+	<title>Jingchao's party</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Jingchao's party" property="og:site_name">
   
-    <meta content="Welcome to Jingchao's Party!" property="og:title">
+    <meta content="Jingchao's party" property="og:title">
   
   
-    <meta content="article" property="og:type">
+    <meta content="website" property="og:type">
   
   
-    <meta content="new here" property="og:description">
+    <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" property="og:description">
   
   
-    <meta content="http://localhost:4000/welcome-to-here/" property="og:url">
+    <meta content="http://localhost:4000/index.html.bak" property="og:url">
   
-  
-    <meta content="2017-04-06T18:32:20+08:00" property="article:published_time">
-    <meta content="http://localhost:4000/about/" property="article:author">
   
   
     <meta content="http://localhost:4000/assets/img/chenjingchao.jpg" property="og:image">
   
   
-    
-  
-  
-    
   
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@">
   
-    <meta name="twitter:title" content="Welcome to Jingchao's Party!">
+    <meta name="twitter:title" content="Jingchao's party">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/welcome-to-here/">
+    <meta name="twitter:url" content="http://localhost:4000/index.html.bak">
   
   
-    <meta name="twitter:description" content="new here">
+    <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
   
   
     <meta name="twitter:image:src" content="http://localhost:4000/assets/img/chenjingchao.jpg">
   
 
-	<meta name="description" content="new here">
+	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -112,48 +107,21 @@
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
 <div class="content-box clearfix">
-  <article class="article-page">
-  <div class="page-content">
-    
-    
-    <div class="wrap-content">
-      <header class="header-page">
-        <h1 class="page-title">Welcome to Jingchao's Party!</h1>
-        <div class="page-date"><span>2017, Apr 06&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
-      </header>
-      <p>之前博客经过各种调整被弃用之后，搬家至此。希望这是一个新的开始，敲文码字，记录点滴。</p>
+  
+
+<div class="container">
+  <nav class="pagination" role="pagination">
+    <ul>
+      
+
+      <p><span class="page-number">Page  of </span></p>
+
+      
+    </ul>
+  </nav>
+</div>
 
 
-      <div class="page-footer">
-        <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=Welcome to Jingchao's Party!&url=http://localhost:4000/welcome-to-here/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/welcome-to-here/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/welcome-to-here/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
-        </div>
-        <div class="page-tag">
-          
-        </div>
-      </div>
-      <section class="comment-area">
-  <div class="comment-wrapper">
-    
-    <div id="disqus_thread" class="article-comments"></div>
-    <script>
-      (function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//mr-brown.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    
-  </div>
-</section> <!-- End Comment Area -->
-
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
-</article> <!-- End Article Page -->
 
 </div>
 

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>记一次GlusterFS集群的trouble shooting - Jingchao's party</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Jingchao's party" property="og:site_name">
+  
+    <meta content="记一次GlusterFS集群的trouble shooting" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/%E8%AE%B0%E4%B8%80%E6%AC%A1GlusterFS%E9%9B%86%E7%BE%A4%E7%9A%84trouble-shooting/" property="og:url">
+  
+  
+    <meta content="2018-03-16T02:22:20+08:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/gluster.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="glusterfs" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="记一次GlusterFS集群的trouble shooting">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/%E8%AE%B0%E4%B8%80%E6%AC%A1GlusterFS%E9%9B%86%E7%BE%A4%E7%9A%84trouble-shooting/">
+  
+  
+    <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/gluster.jpg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/chenjingchao.jpg" alt="JingChao"></a>
+      </div>
+      <div class="author-name">JingChao</div>
+      <p>Male, Post-90, and Atypical Virgo. I've finished my undergraduate education at Dalian University of Technology and obtained master's degree at University of Science and Technology. Now I am living in Beijing, always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/alfredchen007" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:chenjingchao@126.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; JingChao</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/gluster.jpg alt="记一次GlusterFS集群的trouble shooting">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">记一次GlusterFS集群的trouble shooting</h1>
+        <div class="page-date"><span>2018, Mar 16&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <h4 id="问题描述">问题描述</h4>
+
+<p>今天同事小S在做高可用交接工作时，为了演示高可用的功能，主动停止了测试环境中GLusterFS集群的卷，结果发现GlusterFS的卷无法启动<!-- more -->，报的错误指向10.131.9.116（测试环境中GlusterFS集群的其中一个节点），同事小S查看116的/opt/glusterfs文件系统时发现GlusterFS的数据目录已经损坏。经排查分析，该磁盘可能有损，由于GlusterFS的高可用机制使应用无法感知，所以负责应用开发的同事小Z一直可正常访问文件系统，今天做高可用演示的时候因为主动停止了卷，该问题得以暴露。此时，因为集群volume宕掉，负责应用开发的同事小Z也发现了应用访问文件系统出现了问题</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-1.jpg" alt="gluster-trouble-shooting-1" /></p>
+
+<blockquote>
+  <p>测试环境的集群主机均为虚拟机，模拟生产环境的4节点分布式副本集群，116是其中的一个节点</p>
+</blockquote>
+
+<h4 id="问题解决记录">问题解决记录</h4>
+
+<h5 id="问题排查与定位">问题排查与定位</h5>
+
+<p>查看116上的glusterfs服务，发现正常</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-2.jpg" alt="gluster-trouble-shooting-2" /></p>
+
+<p>使用gluster peer 命令探测各节点，发现各节点通信情况正常，说明gluster服务本身没有问题（验证glusterd守护进程也正常），排除是软件问题</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-3.jpg" alt="gluster-trouble-shooting-3" /></p>
+
+<blockquote>
+  <p>拟定可行的解决思路：</p>
+
+  <ol>
+    <li>
+      <p>使用remove-brick的方式将损坏的brick移除，再做出一块GlusterFS的专用盘 用add-brick的方式添加进卷组</p>
+    </li>
+    <li>
+      <p>做出一块glusterfs盘，使用replace-brick的方式，不做数据迁移（数据已经损坏）直接替换坏掉的brick</p>
+    </li>
+  </ol>
+</blockquote>
+
+<p>其中对于思路1，因为我们使用的2副本（replica==2），那么remove或add的brick数量必须为2的整数倍，所以选择思路2进行，付出的代价最小</p>
+
+<h5 id="制作glusterfs的专用盘">制作glusterfs的专用盘</h5>
+
+<blockquote>
+  <p>如果在生产环境，需要进行更换备件，将坏盘替换后往往需要重新做raid以及其它事项，所以对于生产环境的硬盘需要注意更多的底层细节，在本案例中仅以虚拟机为例进行说明</p>
+</blockquote>
+
+<p>虚拟机中加一块磁盘50G</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-4.jpg" alt="gluster-trouble-shooting-4" /></p>
+
+<p>在系统中查看device路径为/dev/sdc, 确定了我们已添加成功</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-5.jpg" alt="gluster-trouble-shooting-5" /></p>
+
+<p>创建glusterfs的数据目录 <code class="highlighter-rouge">mkdir -p /opt/glusterfs2/data</code>  损坏的为<code class="highlighter-rouge">/opt/glusterfs/data</code>，暂时不要删除，以免替换的时候找不到文件（因为今天对坏盘暂未删除VG，所以我还不清楚是否能删除），此步骤没截图</p>
+
+<p>创建新的GlusterFS盘：仍在原卷组（glusterfs_vg）下创建新的逻辑卷<code class="highlighter-rouge">lv_opt_glusterfs2</code>, (坏掉的为<code class="highlighter-rouge">lv_opt_glusterfs</code>,对于该类信息的查看可以使用 <code class="highlighter-rouge">vgdisplay -v</code> 命令查看，这里没截图)</p>
+
+<p>创建的工具使用ssm</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-6.jpg" alt="gluster-trouble-shooting-6" /></p>
+
+<p>该命令直接将创建好的盘进行了挂载<code class="highlighter-rouge">/opt/glusterfs2</code>,先umount掉，改一下isize的值为512，与其它三个节点（114、115、117）保持一致</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-7.jpg" alt="gluster-trouble-shooting-7" /></p>
+
+<p>挂载命令写入fstab</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-8.jpg" alt="gluster-trouble-shooting-8" /></p>
+
+<p>执行<code class="highlighter-rouge">mount -a</code> 自动挂载，至此，一块新的glusterfs盘就做好了</p>
+
+<h5 id="使用新的盘替换坏掉的brick">使用新的盘替换坏掉的brick</h5>
+
+<p>首先，使用强制模式启动volume，因为116的盘坏掉了，是不符合volume的启动检查条件的（也就是问题描述中合平无法直接启动volume的现象），但使用volume命令必须在启动的状态下执行，所以首先使用force选项，将有问题的集群卷组强制启动起来</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-9.jpg" alt="gluster-trouble-shooting-9" /></p>
+
+<p>启动后可以查看卷的信息，坏的brick为<code class="highlighter-rouge">10.131.9.116:opt/gluster</code></p>
+
+<blockquote>
+  <p>使用下图中命令，用我们做好的盘把坏盘从集群中替掉（这里加的参数commit force 表示不做数据迁移直接替换，一般正常情况可用start参数先做数据迁移，具体可以使用man gluster查看手册</p>
+</blockquote>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-10.jpg" alt="gluster-trouble-shooting-10" /></p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-11.jpg" alt="gluster-trouble-shooting-11" /></p>
+
+<p>查看替换后的状态，表明已替换成功</p>
+
+<p><img src="/assets/img/glusterfs-trouble-shooting/gluster-trouble-shooting-12.jpg" alt="gluster-trouble-shooting-12" /></p>
+
+<p><strong>后续是否要做数据同步或数据再平衡，可根据实际情况决定，操作的命令同样可以通过 man gluster 查阅</strong></p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=记一次GlusterFS集群的trouble shooting&url=http://localhost:4000/%E8%AE%B0%E4%B8%80%E6%AC%A1GlusterFS%E9%9B%86%E7%BE%A4%E7%9A%84trouble-shooting/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/%E8%AE%B0%E4%B8%80%E6%AC%A1GlusterFS%E9%9B%86%E7%BE%A4%E7%9A%84trouble-shooting/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/%E8%AE%B0%E4%B8%80%E6%AC%A1GlusterFS%E9%9B%86%E7%BE%A4%E7%9A%84trouble-shooting/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#glusterfs" class="tag">&#35; glusterfs</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

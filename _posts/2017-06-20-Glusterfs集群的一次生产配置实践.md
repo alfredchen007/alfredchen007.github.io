@@ -18,7 +18,7 @@ tags: [glusterfs]
 
 ### 什么是GlusterFS
 
-与NFS，GFS，HDFS之类的文件系统类似，GlusterFS也是一种分布式文件系统，并且开源。使用者不用了解也不需知道底层文件的存储形式、分布，具有高扩展性、高可用性和弹性卷管理等特点。更多内容可移步[官网](https://www.gluster.org)了解，关于原理与机制计划单写一篇另述。
+与NFS，GFS，HDFS之类的文件系统类似，GlusterFS也是一种分布式文件系统，并且开源。使用者不用了解也不需知道底层文件的存储形式、分布，具有高扩展性、高可用性和弹性卷管理等特点<!-- more -->。更多内容可移步[官网](https://www.gluster.org)了解，关于原理与机制计划单写一篇另述。
 
 ![glusterfs]({{site.baseurl}}/assets/img/glusterfs.jpg)
 
