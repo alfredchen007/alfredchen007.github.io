@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Construction of Smart Contract Dev-Environment based on Ethereum - Jingchao's party</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Jingchao's party" property="og:site_name">
+  
+    <meta content="Construction of Smart Contract Dev-Environment based on Ethereum" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/Construction-of-Smart-Contract-Dev-Environment-based-on-Ethereum/" property="og:url">
+  
+  
+    <meta content="2018-05-25T01:40:20+08:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/ethereum.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="blockchain" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Construction of Smart Contract Dev-Environment based on Ethereum">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/Construction-of-Smart-Contract-Dev-Environment-based-on-Ethereum/">
+  
+  
+    <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/ethereum.jpg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/chenjingchao.jpg" alt="JingChao"></a>
+      </div>
+      <div class="author-name">JingChao</div>
+      <p>Male, Post-90, and Atypical Virgo. I've finished my undergraduate education at DaLian University of Technology and obtained master's degree at University of Science and Technology of China. Now I am living in Beijing, always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/alfredchen007" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:chenjingchao@126.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; JingChao</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/ethereum.jpg alt="Construction of Smart Contract Dev-Environment based on Ethereum">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Construction of Smart Contract Dev-Environment based on Ethereum</h1>
+        <div class="page-date"><span>2018, May 25&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>We will introduce how to build development environment of smart contract in this blog and you will get the method how to kick off with a simple “Hello World” demo.<!-- more --></p>
+
+<h3 id="solidity">Solidity</h3>
+
+<p>We will use Remix-Solidity IDE and this is the easier way to start due to you do not need install Solidity, you  can still install <a href="https://solidity.readthedocs.io/en/develop/installing-solidity.html">Solidity</a> as you will.</p>
+
+<h3 id="install-geth-in-mac">Install geth in Mac</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AlfreddeMacBook-Pro:~ alfred<span class="nv">$ </span>brew tap ethereum/ethereum
+Updating Homebrew...
+<span class="o">==&gt;</span> Downloading https://homebrew.bintray.com/bottles-portable-ruby/portable-ruby-2.3.7.leopard_64.bottle.tar.gz
+<span class="c">######################################################################## 100.0%</span>
+<span class="o">==&gt;</span> Pouring portable-ruby-2.3.7.leopard_64.bottle.tar.gz
+<span class="o">==&gt;</span> Auto-updated Homebrew!
+Updated 1 tap <span class="o">(</span>homebrew/core<span class="o">)</span><span class="nb">.</span>
+<span class="o">==&gt;</span> New Formulae
+
+...<span class="o">(</span>省略部分列表）
+
+<span class="o">==&gt;</span> Renamed Formulae
+cdiff -&gt; ydiff                                       latexila -&gt; gnome-latex                              php71 -&gt; php@7.1
+crystal-lang -&gt; crystal                              php56 -&gt; php@5.6                                     saltstack -&gt; salt
+geth -&gt; ethereum                                     php70 -&gt; php@7.0                                     wpcli-completion -&gt; wp-cli-completion
+<span class="o">==&gt;</span> Deleted Formulae
+arm                       bokken                    i3status                  mal4s                     nazghul                   voltdb
+artifactory-cli-go        ecj                       llvm@3.8                  mimetic                   picolisp                  wry
+aws-cloudsearch           i3                        luciddb                   monotone                  ufoai
+
+<span class="o">==&gt;</span> Tapping ethereum/ethereum
+Cloning into <span class="s1">'/usr/local/Homebrew/Library/Taps/ethereum/homebrew-ethereum'</span>...
+remote: Counting objects: 6, <span class="k">done</span><span class="nb">.</span>
+remote: Compressing objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
+remote: Total 6 <span class="o">(</span>delta 1<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 0
+Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
+Tapped 3 formulae <span class="o">(</span>33 files, 33.6KB<span class="o">)</span><span class="nb">.</span>
+</code></pre></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AlfreddeMacBook-Pro:~ alfred<span class="nv">$ </span>brew <span class="nb">install </span>ethereum
+Updating Homebrew...
+<span class="o">==&gt;</span> Downloading https://homebrew.bintray.com/bottles/ethereum-1.8.12.high_sierra.bottle.tar.gz
+<span class="c">######################################################################## 100.0%</span>
+<span class="o">==&gt;</span> Pouring ethereum-1.8.12.high_sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/ethereum/1.8.12: 20 files, 228MB
+</code></pre></div></div>
+
+<h3 id="start-geth">Start Geth</h3>
+
+<p>Geth is a ethereum client, now we start an ethereum network node with geth</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AlfreddeMacBook-Pro:chenjingchao alfred<span class="nv">$ </span><span class="nb">mkdir </span>blockchain
+AlfreddeMacBook-Pro:chenjingchao alfred<span class="nv">$ </span><span class="nb">cd </span>blockchain/
+AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span><span class="nb">ls
+</span>AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>geth <span class="nt">--datadir</span> testNet <span class="nt">--dev</span> console 2&gt;&gt; test.log
+Welcome to the Geth JavaScript console!
+
+instance: Geth/v1.8.12-stable/darwin-amd64/go1.10.3
+coinbase: 0xf70888b4f9f3f10f13ac7939765636dbef62b77c
+at block: 0 <span class="o">(</span>Thu, 01 Jan 1970 08:00:00 CST<span class="o">)</span>
+ datadir: /Users/alfred/chenjingchao/blockchain/testNet
+ modules: admin:1.0 clique:1.0 debug:1.0 eth:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 shh:1.0 txpool:1.0 web3:1.0
+
+<span class="o">&gt;</span> 
+
+</code></pre></div></div>
+
+<p><strong>–dev</strong> means develope network mode, POA will be used by this mode and a developer account will preallocated which surpport  automatic mining.</p>
+
+<p><strong>–datadir</strong> meas the directory where the block data and key stored, a testNet directory will created when you input the command first time.</p>
+
+<p><strong>console</strong> just the console.</p>
+
+<p><strong>2» test.log</strong> console log output to test.log</p>
+
+<h3 id="prepare-account">prepare account</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> eth.accounts
+<span class="o">[</span><span class="s2">"0xf70888b4f9f3f10f13ac7939765636dbef62b77c"</span><span class="o">]</span>
+<span class="o">&gt;</span> 
+
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> personal.listAccounts
+<span class="o">[</span><span class="s2">"0xf70888b4f9f3f10f13ac7939765636dbef62b77c"</span><span class="o">]</span>
+<span class="o">&gt;</span> 
+
+</code></pre></div></div>
+
+<h3 id="check-balance">Check balance</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> eth.getBalance<span class="o">(</span>eth.accounts[0]<span class="o">)</span>
+1.15792089237316195423570985008687907853269984665640564039457584007913129639927e+77
+<span class="o">&gt;</span> 
+
+</code></pre></div></div>
+
+<p><strong>eth.accounts[0]</strong> means the first one of account list, it shows pretty huge balance when you click the enter.</p>
+
+<p>Beacause of much balance in developer account, nothing changed shall we see when deploying contract. We choose create a new account in terms of better show.</p>
+
+<h3 id="create-account">Create account</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> personal.newAccount<span class="o">(</span><span class="s2">"jingchao"</span><span class="o">)</span>
+<span class="s2">"0xe78bd82783486461e47028a216f441064adb6db7"</span>
+<span class="o">&gt;</span> 
+
+</code></pre></div></div>
+
+<p>“jingchao” is password of the new account, it returns a new account as clicking the Enter.</p>
+
+<p>check the account list</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> eth.accounts
+<span class="o">[</span><span class="s2">"0xf70888b4f9f3f10f13ac7939765636dbef62b77c"</span>, <span class="s2">"0xe78bd82783486461e47028a216f441064adb6db7"</span><span class="o">]</span>
+<span class="o">&gt;</span> 
+</code></pre></div></div>
+
+<p>We will see there have 2 accounts including the one we just created which index number is “1”,  and also you can check it in the way below as you will get the same result.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> personal.listAccounts
+<span class="o">[</span><span class="s2">"0xf70888b4f9f3f10f13ac7939765636dbef62b77c"</span>, <span class="s2">"0xe78bd82783486461e47028a216f441064adb6db7"</span><span class="o">]</span>
+<span class="o">&gt;</span> 
+</code></pre></div></div>
+
+<p>check the balance of new account</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> eth.getBalance<span class="o">(</span>eth.accounts[1]<span class="o">)</span>
+0
+<span class="o">&gt;</span> 
+</code></pre></div></div>
+
+<h3 id="transfer-accounts">Transfer accounts</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> eth.sendTransaction<span class="o">({</span>from: <span class="s1">'0xf70888b4f9f3f10f13ac7939765636dbef62b77c'</span>, to: <span class="s1">'0xe78bd82783486461e47028a216f441064adb6db7'</span>, value: web3.toWei<span class="o">(</span>1, <span class="s2">"ether"</span><span class="o">)})</span>
+<span class="s2">"0xc29da3bf5a9af4eb6279c0938196690a306a5ed132e08b17d1367647da93d16d"</span>
+<span class="o">&gt;</span> eth.getBalance<span class="o">(</span>eth.accounts[1]<span class="o">)</span>
+1000000000000000000
+<span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="unlock-account">Unlock account</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> personal.unlockAccount<span class="o">(</span>eth.accounts[1], <span class="s2">"jingchao"</span><span class="o">)</span><span class="p">;</span>
+<span class="nb">true</span>
+<span class="o">&gt;</span> 
+</code></pre></div></div>
+
+<h3 id="write-contract-code">Write contract code</h3>
+
+<p>Open <a href="https://ethereum.github.io/browser-solidity/">Browser-Solidity</a> and write code, click ‘details’ to deploy.</p>
+
+<p><img src="/assets/img/dev-env-ethereum/01.jpg" alt="" /></p>
+
+<p>Find the part tagged with “WEB3DEPLOY” and click copy button, modify initial string to “Hello World” after pasting the part into editor.</p>
+
+<p><img src="/assets/img/dev-env-ethereum/02.jpg" alt="" /></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> var _greeting <span class="o">=</span> <span class="s2">"Hello World"</span> <span class="p">;</span>
+undefined
+<span class="o">&gt;</span> var helloContract <span class="o">=</span> web3.eth.contract<span class="o">([{</span><span class="s2">"constant"</span>:true,<span class="s2">"inputs"</span>:[],<span class="s2">"name"</span>:<span class="s2">"say"</span>,<span class="s2">"outputs"</span>:[<span class="o">{</span><span class="s2">"name"</span>:<span class="s2">""</span>,<span class="s2">"type"</span>:<span class="s2">"string"</span><span class="o">}]</span>,<span class="s2">"payable"</span>:false,<span class="s2">"stateMutability"</span>:<span class="s2">"view"</span>,<span class="s2">"type"</span>:<span class="s2">"function"</span><span class="o">}</span>,<span class="o">{</span><span class="s2">"inputs"</span>:[<span class="o">{</span><span class="s2">"name"</span>:<span class="s2">"_greeting"</span>,<span class="s2">"type"</span>:<span class="s2">"string"</span><span class="o">}]</span>,<span class="s2">"payable"</span>:false,<span class="s2">"stateMutability"</span>:<span class="s2">"nonpayable"</span>,<span class="s2">"type"</span>:<span class="s2">"constructor"</span><span class="o">}])</span><span class="p">;</span>
+undefined
+<span class="o">&gt;</span> var hello <span class="o">=</span> helloContract.new<span class="o">(</span>
+...    _greeting,
+...    <span class="o">{</span>
+......      from: web3.eth.accounts[0], 
+......      data: <span class="s1">'0x608060405234801561001057600080fd5b506040516102a83803806102a8833981018060405281019080805182019291905050508060009080519060200190610049929190610050565b50506100f5565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061009157805160ff19168380011785556100bf565b828001600101855582156100bf579182015b828111156100be5782518255916020019190600101906100a3565b5b5090506100cc91906100d0565b5090565b6100f291905b808211156100ee5760008160009055506001016100d6565b5090565b90565b6101a4806101046000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063954ab4b214610046575b600080fd5b34801561005257600080fd5b5061005b6100d6565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009b578082015181840152602081019050610080565b50505050905090810190601f1680156100c85780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561016e5780601f106101435761010080835404028352916020019161016e565b820191906000526020600020905b81548152906001019060200180831161015157829003601f168201915b50505050509050905600a165627a7a723058203cc10a2d759eeaf0cba7a6420a865bcf258ae66fee2577bde1db0b31f0fc0cf10029'</span>, 
+......      gas: <span class="s1">'4700000'</span>
+......    <span class="o">}</span>, <span class="k">function</span> <span class="o">(</span>e, contract<span class="o">){</span>
+......     console.log<span class="o">(</span>e, contract<span class="o">)</span><span class="p">;</span>
+......     <span class="k">if</span> <span class="o">(</span>typeof contract.address <span class="o">!==</span> <span class="s1">'undefined'</span><span class="o">)</span> <span class="o">{</span>
+.........          console.log<span class="o">(</span><span class="s1">'Contract mined! address: '</span> + contract.address + <span class="s1">' transactionHash: '</span> + contract.transactionHash<span class="o">)</span><span class="p">;</span>
+.........     <span class="o">}</span>
+......  <span class="o">})</span>
+null <span class="o">[</span>object Object]
+undefined
+<span class="o">&gt;</span> null <span class="o">[</span>object Object]
+Contract mined! address: 0x528754900317f565cd18328c430ed71cdb0db239 transactionHash: 0xa75702df9f7729a8c93a6b2616fa4c6a8faea5c3193b103c58d22cb7b105756d
+null <span class="o">[</span>object Object]
+Contract mined! address: 0xf4a443f2febe597c7ba665cd45378b7f962d32fd transactionHash: 0x1bb023ea80bc3a07e8078d0ccde6ffa3081d67f5a1a4a7460de305a7e2b2f832
+
+
+</code></pre></div></div>
+
+<p>Contact has been deployed successfully.</p>
+
+<h3 id="run-contract">Run contract</h3>
+
+<p>check hello</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> hello
+<span class="o">{</span>
+  abi: <span class="o">[{</span>
+      constant: <span class="nb">true</span>,
+      inputs: <span class="o">[]</span>,
+      name: <span class="s2">"say"</span>,
+      outputs: <span class="o">[{</span>...<span class="o">}]</span>,
+      payable: <span class="nb">false</span>,
+      stateMutability: <span class="s2">"view"</span>,
+      <span class="nb">type</span>: <span class="s2">"function"</span>
+  <span class="o">}</span>, <span class="o">{</span>
+      inputs: <span class="o">[{</span>...<span class="o">}]</span>,
+      payable: <span class="nb">false</span>,
+      stateMutability: <span class="s2">"nonpayable"</span>,
+      <span class="nb">type</span>: <span class="s2">"constructor"</span>
+  <span class="o">}]</span>,
+  address: <span class="s2">"0xf4a443f2febe597c7ba665cd45378b7f962d32fd"</span>,
+  transactionHash: <span class="s2">"0x1bb023ea80bc3a07e8078d0ccde6ffa3081d67f5a1a4a7460de305a7e2b2f832"</span>,
+  allEvents: <span class="k">function</span><span class="o">()</span>,
+  say: <span class="k">function</span><span class="o">()</span>
+<span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>run</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> hello.say<span class="o">()</span>
+<span class="s2">"Hello World"</span>
+<span class="o">&gt;</span> 
+</code></pre></div></div>
+
+<h2 id="remix-ide">Remix IDE</h2>
+
+<h3 id="nvm-install">nvm install</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+</code></pre></div></div>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>curl <span class="nt">-o-</span> https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 12819  100 12819    0     0  11138      0  0:00:01  0:00:01 <span class="nt">--</span>:--:-- 11146
+<span class="o">=&gt;</span> Downloading nvm from git to <span class="s1">'/Users/alfred/.nvm'</span>
+<span class="o">=&gt;</span> Cloning into <span class="s1">'/Users/alfred/.nvm'</span>...
+remote: Counting objects: 267, <span class="k">done</span><span class="nb">.</span>
+remote: Compressing objects: 100% <span class="o">(</span>242/242<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
+remote: Total 267 <span class="o">(</span>delta 31<span class="o">)</span>, reused 86 <span class="o">(</span>delta 15<span class="o">)</span>, pack-reused 0
+Receiving objects: 100% <span class="o">(</span>267/267<span class="o">)</span>, 119.47 KiB | 249.00 KiB/s, <span class="k">done</span><span class="nb">.</span>
+Resolving deltas: 100% <span class="o">(</span>31/31<span class="o">)</span>, <span class="k">done</span><span class="nb">.</span>
+<span class="o">=&gt;</span> Compressing and cleaning up git repository
+
+<span class="o">=&gt;</span> Appending nvm <span class="nb">source </span>string to /Users/alfred/.bash_profile
+<span class="o">=&gt;</span> Appending bash_completion <span class="nb">source </span>string to /Users/alfred/.bash_profile
+<span class="o">=&gt;</span> Close and reopen your terminal to start using nvm or run the following to use it now:
+
+<span class="nb">export </span><span class="nv">NVM_DIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.nvm"</span>
+<span class="o">[</span> <span class="nt">-s</span> <span class="s2">"</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="se">\.</span> <span class="s2">"</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh"</span>  <span class="c"># This loads nvm</span>
+<span class="o">[</span> <span class="nt">-s</span> <span class="s2">"</span><span class="nv">$NVM_DIR</span><span class="s2">/bash_completion"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="se">\.</span> <span class="s2">"</span><span class="nv">$NVM_DIR</span><span class="s2">/bash_completion"</span>  <span class="c"># This loads nvm bash_completion</span>
+AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>
+</code></pre></div></div>
+
+<h3 id="install-node-with-nvm">install node with nvm</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>nvm <span class="nb">install </span>7
+Downloading and installing node v7.10.1...
+Downloading https://nodejs.org/dist/v7.10.1/node-v7.10.1-darwin-x64.tar.xz...
+<span class="c">######################################################################## 100.0%</span>
+Computing checksum with shasum <span class="nt">-a</span> 256
+Checksums matched!
+Now using node v7.10.1 <span class="o">(</span>npm v4.2.0<span class="o">)</span>
+Creating default <span class="nb">alias</span>: default -&gt; 7 <span class="o">(</span>-&gt; v7.10.1<span class="o">)</span>
+AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>
+</code></pre></div></div>
+
+<h3 id="check-version">check version</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>node <span class="nt">--version</span>
+v7.10.1
+AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>npm <span class="nt">--version</span>
+4.2.0
+AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>nvm <span class="nt">--version</span>
+0.33.11
+
+</code></pre></div></div>
+
+<h3 id="install-remix-ide-with-command-line">install Remix ide with command line</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>remix-ide <span class="nt">-g</span>
+</code></pre></div></div>
+
+<p>Start Remix IDE</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AlfreddeMacBook-Pro:blockchain alfred<span class="nv">$ </span>remix-ide
+setup notifications <span class="k">for</span> /Users/alfred/chenjingchao/blockchain
+Shared folder : /Users/alfred/chenjingchao/blockchain
+Starting Remix IDE at http://localhost:8080 and sharing /Users/alfred/chenjingchao/blockchain
+Sat Jul 21 2018 01:20:20 GMT+0800 <span class="o">(</span>CST<span class="o">)</span> Remixd is listening on 127.0.0.1:65520
+</code></pre></div></div>
+
+<p><img src="/assets/img/dev-env-ethereum/03.jpg" alt="" /></p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Construction of Smart Contract Dev-Environment based on Ethereum&url=http://localhost:4000/Construction-of-Smart-Contract-Dev-Environment-based-on-Ethereum/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/Construction-of-Smart-Contract-Dev-Environment-based-on-Ethereum/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/Construction-of-Smart-Contract-Dev-Environment-based-on-Ethereum/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#blockchain" class="tag">&#35; blockchain</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//mr-brown.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
