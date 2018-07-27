@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Linux下定制RPM软件包 - Jingchao's party</title>
+	<title>Linux下定制RPM软件包 - Jingchao's Party</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
-    <meta content="Jingchao's party" property="og:site_name">
+    <meta content="Jingchao's Party" property="og:site_name">
   
     <meta content="Linux下定制RPM软件包" property="og:title">
   
@@ -136,7 +136,6 @@
 <p>RPM是<strong>RPM Package Manager</strong>的缩写，以前的缩写为Red-Hat Package Manager（RPM软件包管理器），这一文件格式名称虽然打上了RedHat的标志（其诞生时用于Red Hat Linux），但其开放的设计理念使其不仅被Linux诸多发行版所采用，还被其它操作系统平台引入，例如Novell Netware，AIX等<!-- more --> 。</p>
 
 <p><img src="/assets/img/rpm-nginx/rpm-nginx-000.jpg" alt="000" /></p>
-
 <h3 id="为什么要定制">为什么要定制</h3>
 
 <p>定制RPM包一般来源于工程中的需要，例如某些软件只提供源码版本，每次部署都要copy一份以前编译好的版本到新的开发测试环境中去，这个过程费劲不说（尤其在网段之间是隔离的环境中），随着时间的推移，以前版本中做过的个性化配置与修改往往也被引入到了新的环境，不利于后续的开发测试工作，所以利用RPM把标准的软件包管理起来作为基线是自然而然的选择。</p>

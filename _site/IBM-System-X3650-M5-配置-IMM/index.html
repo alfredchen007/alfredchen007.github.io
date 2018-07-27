@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Use 'expect' tool to change passwd in Linux - Jingchao's Party</title>
+	<title>IBM System X3650 M5 配置IMM - Jingchao's Party</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Jingchao's Party" property="og:site_name">
   
-    <meta content="Use 'expect' tool to change passwd in Linux" property="og:title">
+    <meta content="IBM System X3650 M5 配置IMM" property="og:title">
   
   
     <meta content="article" property="og:type">
@@ -18,14 +18,14 @@
 " property="og:description">
   
   
-    <meta content="http://localhost:4000/Use-expect-tool-to-change-passwd-in-Linux/" property="og:url">
+    <meta content="http://localhost:4000/IBM-System-X3650-M5-%E9%85%8D%E7%BD%AE-IMM/" property="og:url">
   
   
-    <meta content="2017-12-24T15:23:20+08:00" property="article:published_time">
+    <meta content="2018-07-27T01:40:20+08:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/passwd.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/imm.jpg" property="og:image">
   
   
     
@@ -40,17 +40,17 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@">
   
-    <meta name="twitter:title" content="Use 'expect' tool to change passwd in Linux">
+    <meta name="twitter:title" content="IBM System X3650 M5 配置IMM">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/Use-expect-tool-to-change-passwd-in-Linux/">
+    <meta name="twitter:url" content="http://localhost:4000/IBM-System-X3650-M5-%E9%85%8D%E7%BD%AE-IMM/">
   
   
     <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/passwd.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/imm.jpg">
   
 
 	<meta name="description" content="">
@@ -121,38 +121,47 @@
     
     <div class="page-cover-image">
       <figure>
-        <img class="page-image" src=/assets/img/passwd.jpg alt="Use 'expect' tool to change passwd in Linux">
+        <img class="page-image" src=/assets/img/imm.jpg alt="IBM System X3650 M5 配置IMM">
         
       </figure>
     </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">Use 'expect' tool to change passwd in Linux</h1>
-        <div class="page-date"><span>2017, Dec 24&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">IBM System X3650 M5 配置IMM</h1>
+        <div class="page-date"><span>2018, Jul 27&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <h3 id="change_passwd">change_passwd</h3>
+      <h3 id="imm-配置ip">IMM 配置IP</h3>
 
-<p>A little demo for the usage of <strong>‘expect’</strong> in shell.<!-- more --></p>
+<p>服务器上电后，根据提示按F1进入setup，选择 <strong>System Setting</strong><!-- more --></p>
 
-<p>Normally, distributed system always contain certain nodes, we come across such a situation that each node owns a same user we call it ‘pop’, we use this script to change password of user ‘pop’.</p>
+<p><img src="/assets/img/imm/01.png" alt="" /></p>
 
-<h4 id="install--run">install &amp; run</h4>
+<p>进入后选择 <strong>Intergrated Management Module</strong></p>
 
-<p>copy the whole folder to one of the nodes and install expect</p>
+<p><img src="/assets/img/imm/02.png" alt="" /></p>
 
-<p>use ‘admin’ user run “run.sh” <code class="highlighter-rouge">sh run.sh 2&gt;&amp;1 | tee passwd.log</code>( you can also use root as you like, just change the script ) .</p>
+<p>选择 <strong>Network Configuration</strong></p>
 
-<h4 id="find-source-code">find source code</h4>
+<p><img src="/assets/img/imm/03.png" alt="" /></p>
 
-<p><a href="https://github.com/alfredchen007/change_passwd">click me</a></p>
+<p>根据IP地址的信息填写并使用 <strong>Save Network Setting</strong> 保存配置</p>
 
+<p><img src="/assets/img/imm/04.png" alt="" /></p>
+
+<blockquote>
+  <p>保存后配置生效需要一段时间（保存时也会有提示），所以保存后立即点进去发现IP配置没有写入不要着急，等一段时间再进入查看即可（实际操作中大概为10秒左右）</p>
+</blockquote>
+
+<h3 id="imm-访问与使用">IMM 访问与使用</h3>
+
+<p>待填坑</p>
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=Use 'expect' tool to change passwd in Linux&url=http://localhost:4000/Use-expect-tool-to-change-passwd-in-Linux/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/Use-expect-tool-to-change-passwd-in-Linux/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/Use-expect-tool-to-change-passwd-in-Linux/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+          <a href="https://twitter.com/intent/tweet?text=IBM System X3650 M5 配置IMM&url=http://localhost:4000/IBM-System-X3650-M5-%E9%85%8D%E7%BD%AE-IMM/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/IBM-System-X3650-M5-%E9%85%8D%E7%BD%AE-IMM/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/IBM-System-X3650-M5-%E9%85%8D%E7%BD%AE-IMM/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
