@@ -7,7 +7,7 @@ date: 2018-07-26 20:40:20 +0300
 
 description:  
 
-img: imm.jpg # Add image post (optional)
+cover: /assets/img/imm.jpg # Add image post (optional)
 
 tags: [linux]
 ---

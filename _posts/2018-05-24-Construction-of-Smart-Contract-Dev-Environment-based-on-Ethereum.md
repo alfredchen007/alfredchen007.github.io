@@ -8,7 +8,7 @@ date: 2018-05-24 20:40:20 +0300
 
 description:  
 
-img: ethereum.jpg # Add image post (optional)
+cover: /assets/img/ethereum.jpg # Add image post (optional)
 
 tags: [blockchain]
 

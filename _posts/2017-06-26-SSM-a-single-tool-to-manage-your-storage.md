@@ -7,7 +7,7 @@ date: 2017-06-26 15:24:20 +0300
 
 description:  
 
-img: disk.jpg # Add image post (optional)
+cover: /assets/img/disk.jpg # Add image post (optional)
 
 tags: [linux]
 ---

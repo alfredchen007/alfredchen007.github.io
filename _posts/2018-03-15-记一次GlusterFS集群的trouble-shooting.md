@@ -7,7 +7,7 @@ date: 2018-03-15 21:22:20 +0300
 
 description:  
 
-img:  gluster.jpg # Add image post (optional)
+cover: /assets/img/gluster.jpg # Add image post (optional)
 
 tags: [glusterfs]
 ---
