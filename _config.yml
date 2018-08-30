@@ -21,7 +21,7 @@ webtitle: 'Jingchao'
 bio: 'your awesome bio'
 about: true
 aboutyou: 'your introduction'
-portraits: '/assets/profile.jpeg' # your portraits image file path
+portraits: '/assets/img/chenjingchao.jpg' # your portraits image file path
 
 # SNS
 SNS: true
