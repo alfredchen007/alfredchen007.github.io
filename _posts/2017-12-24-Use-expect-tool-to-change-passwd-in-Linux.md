@@ -8,7 +8,7 @@ date: 2017-12-24 10:23:20 +0300
 
 description:  
 
-img: passwd.jpg 
+cover: /assets/img/passwd.jpg 
 
 tags: [linux]
 
