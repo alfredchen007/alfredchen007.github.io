@@ -1,0 +1,334 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="/assets/fonts/sns/iconfont.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet">
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>SSM: a single tool to manage your storage</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" #9A85FF ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:#9A85FF;">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;"></a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">SSM: a single tool to manage your storage</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;JingChao</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:#9A85FF;">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="/conference-on-javascript/" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">Conference on Javascript</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">SSM: a single tool to manage your storage</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;JingChao</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/Glusterfs%E9%9B%86%E7%BE%A4%E7%9A%84%E4%B8%80%E6%AC%A1%E7%94%9F%E4%BA%A7%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%B7%B5/" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='#9A85FF';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:#9A85FF;"><sapn class="main">GlusterFS集群的一次生产配置实践</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="/conference-on-javascript/" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>上一篇<br><br>Conference on Javascript</span></a>
+    
+    
+      <a href="/Glusterfs%E9%9B%86%E7%BE%A4%E7%9A%84%E4%B8%80%E6%AC%A1%E7%94%9F%E4%BA%A7%E9%85%8D%E7%BD%AE%E5%AE%9E%E8%B7%B5/" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>GlusterFS集群的一次生产配置实践</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <h3 id="ssm--system-storage-manager-">SSM ( System-Storage-Manager )</h3>
+
+<p><em>System Storage Manager</em> (SSM) provides a command line interface to manage storage in various technologies. We will show a kind of use case that how to manage a brand new disk and mount it on the certain point.<!-- more --></p>
+
+<h3 id="background">Background</h3>
+
+<p>We consider such a situation that we already have had a machine running with Linux OS, and now we finding out the space of <code class="highlighter-rouge">/opt</code> is almost running out in some reasons. We decide add a new disk for this node ( if you are using virtual machine  you just add a new disk without any other operations, but you have to take consideration of raid in physical machine case ) endeavor to migrate data to this new space and keep the mount point ( <code class="highlighter-rouge">/opt</code> ) stays the same for long.</p>
+
+<h3 id="script">Script</h3>
+
+<p>Here we give a comparatively complete steps in this script demo though the command is pretty simple. You still have to notice that there are several special conditions are limited in our case: 1) Available yum source; 2) The device name of disk new added is <code class="highlighter-rouge">/dev/sdb</code> and the mount point is <code class="highlighter-rouge">/opt</code>; 3) The logic volume name is <code class="highlighter-rouge">lv_opt</code>, the volume group name is <code class="highlighter-rouge">datavg</code>, those are specified in command <code class="highlighter-rouge">ssm create -n lv_opt --fstype xfs -p datavg /dev/sdb /opt</code></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+<span class="c">#if [ $# -ne 1 ];then</span>
+<span class="c">#  action "USAGE: $0 disk-use"</span>
+<span class="c">#  exit 1</span>
+<span class="c">#fi</span>
+<span class="nb">.</span> /etc/init.d/functions
+
+<span class="nv">current_user</span><span class="o">=</span><span class="sb">`</span><span class="nb">whoami</span><span class="sb">`</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">"</span><span class="nv">$current_user</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"root"</span> <span class="o">]]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"ensure user is root"</span> /bin/true
+<span class="k">else
+  </span>action <span class="s2">"run script must is root"</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+
+</span>rpm <span class="nt">-qa</span> |grep <span class="s2">"system-storage-manager"</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-eq</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"system-storage-manager have been install "</span> /bin/true
+<span class="k">else
+
+  </span>yum list |grep system-storage-manager <span class="o">&gt;</span> /dev/null
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+    </span>action <span class="s2">"yum list haven't system-storage-manager"</span> /bin/false
+    <span class="nb">exit </span>1
+  <span class="k">fi
+  </span><span class="nb">echo</span> <span class="s2">"start install system-storage-manager..."</span>
+
+  yum <span class="nt">-y</span> <span class="nb">install </span>system-storage-manager <span class="o">&gt;</span> /dev/null
+  rpm <span class="nt">-qa</span> |grep <span class="s2">"system-storage-manager"</span> <span class="o">&gt;</span> /dev/null
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+    </span>action <span class="s2">"system-storage-manager install fail "</span> /bin/false
+    <span class="nb">exit </span>1
+  <span class="k">fi
+  </span>action <span class="s2">"system-storage-manager install Success"</span> /bin/true
+<span class="k">fi
+
+</span><span class="nv">opt_line</span><span class="o">=</span><span class="sb">`</span><span class="nb">ls</span> <span class="nt">-l</span> /opt | <span class="nb">wc</span> <span class="nt">-l</span><span class="sb">`</span>
+<span class="nb">echo</span>  <span class="s2">"/opt file lines is </span><span class="nv">$opt_line</span><span class="s2">"</span>
+<span class="nb">mkdir</span> <span class="nt">-p</span> /tmp/opt
+<span class="nb">mv</span> /opt/<span class="k">*</span> /tmp/opt
+<span class="nv">tmp_line</span><span class="o">=</span><span class="sb">`</span><span class="nb">ls</span> <span class="nt">-l</span> /tmp/opt | <span class="nb">wc</span> <span class="nt">-l</span><span class="sb">`</span>
+<span class="nb">echo</span>  <span class="s2">"/tmp/opt file lines is </span><span class="nv">$tmp_line</span><span class="s2">"</span>
+
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">"</span><span class="nv">$opt_line</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"</span><span class="nv">$tmp_line</span><span class="s2">"</span> <span class="o">]]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"/opt filelist mv Success "</span> /bin/true
+<span class="k">else
+  </span>action <span class="s2">"/opt filelist mv fail "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+
+</span>fdisk <span class="nt">-l</span> |grep /dev/sdb <span class="o">&gt;</span> /dev/null
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"fdisk /dev/sdb not exist "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+</span>action <span class="s2">"fdisk /dev/sdb  ready OK "</span> /bin/true
+
+<span class="c">#ssm create -s 100%FREE -n lv_opt --fstype xfs -p datavg /dev/sdb /opt &gt; /dev/null</span>
+ssm create <span class="nt">-n</span> lv_opt <span class="nt">--fstype</span> xfs <span class="nt">-p</span> datavg /dev/sdb /opt <span class="o">&gt;</span> /dev/null
+pvs |grep /dev/sdb
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"PV create fail "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+</span>action <span class="s2">"PV create Success "</span> /bin/true
+vgs |grep datavg
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"VG create fail "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+</span>action <span class="s2">"VG create Success "</span> /bin/true
+lvs |grep lv_opt
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"LV create fail "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+</span>action <span class="s2">"LV create Success "</span> /bin/true
+<span class="nb">df</span> <span class="nt">-Th</span> |grep <span class="s2">"opt"</span> <span class="o">&gt;</span> /dev/null
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"fdisk /dev/sdb not exist "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+</span>action <span class="s2">"/opt mount Success "</span> /bin/true
+
+<span class="nb">echo</span>  <span class="s2">"/dev/mapper/datavg-lv_opt /opt                    xfs    defaults        0 0"</span> <span class="o">&gt;&gt;</span> /etc/fstab
+action <span class="s2">"write mount INFO to /etc/fstab "</span> /bin/true
+<span class="nb">tail</span> <span class="nt">-1</span> /etc/fstab
+
+<span class="nb">echo</span>  <span class="s2">"start auto mount check"</span>
+umount /opt
+<span class="nb">echo</span>  <span class="s2">"start umount /opt "</span>
+<span class="nb">df</span> <span class="nt">-Th</span> |grep <span class="s2">"opt"</span> <span class="o">&gt;</span> /dev/null
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-eq</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"/opt umount fail "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+</span>action <span class="s2">"/opt umount Success "</span> /bin/true
+<span class="nb">echo</span> <span class="s2">"Start Auto mount "</span>
+mount <span class="nt">-a</span>
+<span class="nb">df</span> <span class="nt">-Th</span> |grep <span class="s2">"opt"</span> <span class="o">&gt;</span> /dev/null
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"fdisk /dev/sdb auot mount fail "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+</span>action <span class="s2">"/opt mount Success "</span> /bin/true
+
+<span class="nb">echo</span>  <span class="s2">"/tmp/opt/ file now move /opt "</span>
+<span class="nb">mv</span> /tmp/opt/<span class="k">*</span> /opt/.
+<span class="nv">new_opt_line</span><span class="o">=</span><span class="sb">`</span><span class="nb">ls</span> <span class="nt">-l</span> /opt/. |wc <span class="nt">-l</span><span class="sb">`</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="s2">"</span><span class="nv">$new_opt_line</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"</span><span class="nv">$opt_line</span><span class="s2">"</span> <span class="o">]]</span><span class="p">;</span><span class="k">then
+  </span>action <span class="s2">"/tmp/opt filelist mv Success "</span> /bin/true
+  <span class="nb">echo</span>  <span class="s2">"current line is : </span><span class="nv">$new_opt_line</span><span class="s2">"</span>
+<span class="k">else
+  </span>action   <span class="s2">"/tmp/opt filelist mv fail "</span> /bin/false
+  <span class="nb">exit </span>1
+<span class="k">fi
+
+</span><span class="nb">ls</span> <span class="nt">-l</span> /opt
+<span class="nb">echo</span>  <span class="s2">"all of operation End "</span>
+</code></pre></div></div>
+
+<h3 id="check">Check</h3>
+
+<p>Use <code class="highlighter-rouge">df -h</code> check the result.</p>
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>Jingchao's Party ©
+  
+  
+    
+    -
+  
+  2018
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a> | <a href="https://github.com/xukimseven/HardCandy-Jekyll">HardCandy-Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
