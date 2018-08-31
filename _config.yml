@@ -16,9 +16,9 @@ nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
 # 博主
 author: true
 name: 'Jingchao'
-NickName: 'your awesome nickname'
+NickName: '景超'
 webtitle: 'Jingchao'
-bio: 'your awesome bio'
+bio: '这个人可能没有什么有趣的地方'
 about: true
 aboutyou: 'your introduction'
 portraits: '/assets/img/chenjingchao.jpg' # your portraits image file path
@@ -41,7 +41,7 @@ SNS-icon: #['facebook', 'weibo', 'QQ', 'github', 'Dribbble', 'twitter', 'instagr
   twitch: ''
 
 # 分页
-paginate: 2
+paginate: 4
 paginatepath: ['page:num']
 
 # since
@@ -60,6 +60,7 @@ pygmentsTheme: 'default'
 # 友情链接
 friends:
   jekyll: 'https://www.jekyll.com.cn/'
+  test: 'http://pdsw7h3kf.bkt.clouddn.com/2018-08-31-1331535702513_.pic.jpg'
 
 # 评论 最佳体验 在disqus、livere和Gitment之间三选一
 # disqus 评论
