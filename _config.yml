@@ -27,8 +27,8 @@ portraits: '/assets/img/chenjingchao.jpg' # your portraits image file path
 SNS: true
 SNS-icon: #['facebook', 'weibo', 'QQ', 'github', 'Dribbble', 'twitter', 'instagram', 'weixin']
   mail: 'mailto:alfred.chen007@gmail.com'
-  weixin: '' # your wechat image file path
-  QQ: '' # your QQ image file path
+  weixin: 'http://pdsw7h3kf.bkt.clouddn.com/2018-08-31-1331535702513_.pic.jpg' # your wechat image file path
+  QQ: 'http://pdsw7h3kf.bkt.clouddn.com/2018-08-31-1341535702950_.pic.jpg' # your QQ image file path
   weibo: 'https://weibo.com/carlybb'
   #instagram: ''
   #twitter: ''
