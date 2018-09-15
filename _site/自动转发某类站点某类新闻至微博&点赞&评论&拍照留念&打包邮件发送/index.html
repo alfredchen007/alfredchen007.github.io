@@ -1,0 +1,616 @@
+<!-- 博文的布局-Layout -->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 引入head标签 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/media.css">
+<link rel="stylesheet" href="/assets/css/animate.min.css">
+<link rel="stylesheet" href="/assets/css/pygments/pygments_.css">
+<link rel="stylesheet" href="/assets/css/github-markdown.css">
+<!-- SNS-icon -->
+<script src="/assets/fonts/sns/iconfont.js"></script>
+<!-- share.css -->
+<link rel="stylesheet" href="/assets/css/share.min.css">
+<!-- font -->
+<link rel="stylesheet" href="/assets/css/font.css">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Pacifico|Ubuntu|Roboto+Mono|Source+Sans+Pro" rel="stylesheet">
+
+<!-- Favicon -->
+<link href="/assets/profile.jpeg" rel="shortcut icon" />
+<link href="/assets/profile.jpeg" rel="apple-touch-icon-precomposed" />
+<!-- Android Lolipop Theme Color -->
+<!-- <meta name="theme-color" content="#1464FB"> -->
+<title>自动转发某类站点某类新闻至微博&点赞&评论&拍照留念&打包邮件发送</title>
+<!-- 百度统计 -->
+
+<!-- 谷歌分析 -->
+
+
+<!-- Android Lolipop Theme Color -->
+<meta name="theme-color" content=" #9A85FF ">
+</head>
+<body>
+
+<!-- 顶部锚点 -->
+<a id="htmlup" name="htmlup"></a>
+<!-- 引入博文顶部选项 -->
+
+<header id="post-header" style="background-color:#9A85FF;">
+  <div class="top-center">
+      <div class="logo">
+          <a href="/" title="my awesome webtitle" style="color: white;"></a>
+      </div>
+      <nav class="top-nav">
+          <ul>
+              
+          </ul>
+      </nav>
+      <div id="top-boot">
+        <a href="javascript:;" id="boot1" style="display:block;" onclick="document.getElementById('boot-area').style.display='block';document.getElementById('boot1').style.display='none';document.getElementById('boot2').style.display='block';"><img src="/assets/boot_white.png" alt=""></a>
+        <a href="javascript:;" id="boot2" style="display: none;" onclick="document.getElementById('boot-area').style.display='none';document.getElementById('boot1').style.display='block';document.getElementById('boot2').style.display='none';"><img src="/assets/boot_white.png" alt=""></a>
+      </div>
+  </div>
+
+</header>
+
+
+<!-- 引入移动下拉选项 -->
+<div id="boot-area">
+    <ul>
+        
+    </ul>
+</div>
+
+<!-- 引入博文顶部样式 -->
+<!-- 版本一 垃圾 -->
+<!-- <div class="wow fadeIn top" data-wow-duration="3.5s" >
+    <span class="wow fadeInUp" data-wow-delay="0.2s">自动转发某类站点某类新闻至微博&点赞&评论&拍照留念&打包邮件发送</span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.4s"></span>
+    <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;JingChao</span>
+</div> -->
+
+<!-- 版本二 可切换页面 -->
+
+<div class="post-top" style="background-color:#9A85FF;">
+  <!-- 页面宽度大于800px -->
+  <div class="left-area">
+    
+      <a href="javascript:;" class="btn bounceInLeft animated" onmouseover="showLeft();this.style.color='#9A85FF';" onmouseout="goneLeft();this.style.color='rgba(0,0,0,.2)';"><</a>
+      <div id="left-tab" style="display:none;"><span class="left-san"></span><span class="left-main" style="color:#9A85FF;"><sapn class="main">没有上一页咯</sapn></span></div>
+    
+  </div>
+  <div class="post-titlearea">
+    <span class="wow fadeInUp" data-wow-delay="0.2s">自动转发某类站点某类新闻至微博&点赞&评论&拍照留念&打包邮件发送</span>
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.4s"></span> -->
+    <!-- <span class="wow fadeInUp" data-wow-delay="0.6s">作者&nbsp;&nbsp;|&nbsp;&nbsp;JingChao</span> -->
+  </div>
+  <div class="right-area">
+    
+      <a href="/IBM-System-X3650-M5-%E9%85%8D%E7%BD%AE-IMM/" class="btn bounceInRight self-animated" onmouseover="showRight();this.style.color='#9A85FF';" onmouseout="goneRight();this.style.color='rgba(0,0,0,.2)';">></a>
+      <div id="right-tab" style="display:none;"><span class="right-san"></span><span class="right-main" style="color:#9A85FF;"><sapn class="main">IBM System X3650 M5 配置IMM</sapn></span></div>
+    
+  </div>
+
+  <!-- 页面宽度小于800px -->
+  <div class="post-changearea">
+    
+      <a href="javascript:;" class="leftchange" style="border-right: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span><br>没有上一篇咯</span></a>
+    
+    
+      <a href="/IBM-System-X3650-M5-%E9%85%8D%E7%BD%AE-IMM/" class="rightchange" style="border-left: 1px solid #9A85FF;border-bottom: 2px solid #9A85FF;"><span>下一篇<br><br>IBM System X3650 M5 配置IMM</span></a>
+    
+  </div>
+</div>
+
+
+<div class="markdown-body fadeInUp animated">
+
+  
+
+  <!-- 文章内容 -->
+  <blockquote>
+  <p>Life is short, you need Python.<!-- more --></p>
+</blockquote>
+
+<h3 id="首先这是一个伪需求">首先，这是一个伪需求</h3>
+
+<p>除了遥远读书时期的大大小小作业，这么正（dan）经（teng）的需求在现实生活中竟然还是第一次遇到：</p>
+
+<ul>
+  <li>转发某类文章或报道至个人微博（应相关特殊要求，不能使用小号，必须是真实的个人账号）</li>
+  <li>对转发的文章点赞</li>
+  <li>对微博进行点评（可以是自己的，也可以是他人的）</li>
+  <li>对以上操作截图，证明我曾来过</li>
+  <li>将截图文件打包汇总、发邮件</li>
+</ul>
+
+<p>面对如此正经的需求，人生苦短，你需要Python</p>
+
+<h3 id="loginpost">Login&amp;Post</h3>
+
+<p>对于发送微博有多种实现方法，可以使用廖神的SDK，需要<a href="http://open.weibo.com/wiki/SDK#Python_SDK">下载</a>（点击下载），功能比较简单也可以由我们自己实现，这里不采用SDK的方法，便于我们控制测试。</p>
+
+<h3 id="login">Login</h3>
+
+<p>对比了网上的几类方法，发现貌似使用<a href="https://pypi.python.org/pypi/requests">requests</a>相比于比urllib2实现起来更简洁，这里没有对比二者性能问题，因为目前只是个人使用，并没有设计成服务。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 <span class="nb">install </span>requests
+pip3 <span class="nb">install </span>rsa
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">wblogin</span><span class="p">():</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">USER_NAME</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">PASSWD</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+        <span class="s">'http://login.sina.com.cn/sso/prelogin.php?'</span>
+        <span class="s">'entry=weibo&amp;callback=sinaSSOController.preloginCallBack&amp;'</span>
+        <span class="s">'su=</span><span class="si">%</span><span class="s">s&amp;rsakt=mod&amp;checkpin=1&amp;client=</span><span class="si">%</span><span class="s">s'</span> <span class="o">%</span>
+        <span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">username</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)),</span> <span class="n">WBCLIENT</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="n">pre_login_str</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">r'[^{]+({.+?})'</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">pre_login</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">pre_login_str</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'entry'</span><span class="p">:</span> <span class="s">'weibo'</span><span class="p">,</span>
+        <span class="s">'gateway'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s">'from'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span>
+        <span class="s">'savestate'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s">'userticket'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s">'ssosimplelogin'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s">'su'</span><span class="p">:</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">username</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)),</span>
+        <span class="s">'service'</span><span class="p">:</span> <span class="s">'miniblog'</span><span class="p">,</span>
+        <span class="s">'servertime'</span><span class="p">:</span> <span class="n">pre_login</span><span class="p">[</span><span class="s">'servertime'</span><span class="p">],</span>
+        <span class="s">'nonce'</span><span class="p">:</span> <span class="n">pre_login</span><span class="p">[</span><span class="s">'nonce'</span><span class="p">],</span>
+        <span class="s">'vsnf'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s">'vsnval'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span>
+        <span class="s">'pwencode'</span><span class="p">:</span> <span class="s">'rsa2'</span><span class="p">,</span>
+        <span class="s">'sp'</span><span class="p">:</span> <span class="n">encrypt_passwd</span><span class="p">(</span><span class="n">password</span><span class="p">,</span> <span class="n">pre_login</span><span class="p">[</span><span class="s">'pubkey'</span><span class="p">],</span>
+                             <span class="n">pre_login</span><span class="p">[</span><span class="s">'servertime'</span><span class="p">],</span> <span class="n">pre_login</span><span class="p">[</span><span class="s">'nonce'</span><span class="p">]),</span>
+        <span class="s">'rsakv'</span><span class="p">:</span> <span class="n">pre_login</span><span class="p">[</span><span class="s">'rsakv'</span><span class="p">],</span>
+        <span class="s">'encoding'</span><span class="p">:</span> <span class="s">'UTF-8'</span><span class="p">,</span>
+        <span class="s">'prelt'</span><span class="p">:</span> <span class="s">'53'</span><span class="p">,</span>
+        <span class="s">'url'</span><span class="p">:</span> <span class="s">'http://weibo.com/ajaxlogin.php?framelogin=1&amp;callback=parent.si'</span>
+               <span class="s">'naSSOController.feedBackUrlCallBack'</span><span class="p">,</span>
+        <span class="s">'returntype'</span><span class="p">:</span> <span class="s">'META'</span>
+    <span class="p">}</span>
+
+    <span class="n">login_url_list</span> <span class="o">=</span> <span class="s">'http://login.sina.com.cn/sso/login.php?client=</span><span class="si">%</span><span class="s">s'</span> <span class="o">%</span> <span class="n">WBCLIENT</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">login_url_list</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">match_obj</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">'replace</span><span class="se">\\</span><span class="s">(</span><span class="se">\'</span><span class="s">([^</span><span class="se">\'</span><span class="s">]+)</span><span class="se">\'\\</span><span class="s">)'</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">match_obj</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'登录失败，请检查登录信息'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+
+    <span class="n">login_url</span> <span class="o">=</span> <span class="n">match_obj</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">login_url</span><span class="p">)</span>
+    <span class="n">login_str</span> <span class="o">=</span> <span class="n">login_str</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">'</span><span class="err">\</span><span class="s">((</span><span class="err">\</span><span class="s">{.*</span><span class="err">\</span><span class="s">})</span><span class="err">\</span><span class="s">)'</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">login_info</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">login_str</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">"login success：[</span><span class="si">%</span><span class="s">s]"</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">login_info</span><span class="p">))</span>
+    <span class="n">uniqueid</span> <span class="o">=</span> <span class="n">login_info</span><span class="p">[</span><span class="s">"userinfo"</span><span class="p">][</span><span class="s">"uniqueid"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">uniqueid</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="post">Post</h3>
+
+<p>代码中发送微博使用的接口为<code class="highlighter-rouge">"https://www.weibo.com/aj/mblog/add?ajwvr=6&amp;__rnd=%d" % int(time.time() * 1000</code>，等号后面为时间戳，使用<code class="highlighter-rouge">int(time.time() * 1000</code>设置</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">WeiboSender</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">WeiboSender</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">session</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Referer</span> <span class="o">=</span> <span class="s">"http://www.weibo.com/u/</span><span class="si">%</span><span class="s">s/home?wvr=5"</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">uid</span>
+
+    <span class="k">def</span> <span class="nf">send_weibo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">weibo</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">weibo</span><span class="p">,</span> <span class="n">WeiboMessage</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'weibo must WeiboMessage class type'</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">'weibo must WeiboMessage class type'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">weibo</span><span class="o">.</span><span class="n">is_empty</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'没有获得信息，不发送'</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">pids</span> <span class="o">=</span> <span class="s">''</span>
+        <span class="k">if</span> <span class="n">weibo</span><span class="o">.</span><span class="n">has_image</span><span class="p">:</span>
+            <span class="n">pids</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upload_images</span><span class="p">(</span><span class="n">weibo</span><span class="o">.</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">weibo</span><span class="o">.</span><span class="n">get_send_data</span><span class="p">(</span><span class="n">pids</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">"Referer"</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Referer</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">"https://www.weibo.com/aj/mblog/add?ajwvr=6&amp;__rnd=</span><span class="si">%</span><span class="s">d"</span>
+                              <span class="o">%</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">),</span>
+                              <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'微博[</span><span class="si">%</span><span class="s">s]发送成功'</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">weibo</span><span class="p">))</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">'微博[</span><span class="si">%</span><span class="s">s]发送失败'</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">weibo</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="获取网页新闻">获取网页新闻</h3>
+
+<p>这是一个典型的爬虫场景，大名鼎鼎诸如<a href="https://scrapy.org/">Scrapy</a>、<a href="https://github.com/binux/pyspider">PySpider</a>、<a href="http://project.crawley-cloud.com/">Crawley</a>、<a href="https://github.com/scrapinghub/portia">Portia</a>等等各种框架均可轻松应对，但这对我们这种正经需求来说都太重了，我们使用 <strong><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a></strong> python库这个轻量级选手搭配<code class="highlighter-rouge">requests</code>可以很简洁地实现（经潇洒哥认证过的就是好 ）。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">spider.eastmoney</span> <span class="kn">import</span> <span class="n">EastmoneyParser</span>
+<span class="kn">from</span> <span class="nn">spider.guba</span> <span class="kn">import</span> <span class="n">GubaParser</span>
+<span class="kn">from</span> <span class="nn">spider.ifeng</span> <span class="kn">import</span> <span class="n">IfengParser</span>
+<span class="kn">from</span> <span class="nn">spider.csrc</span> <span class="kn">import</span> <span class="n">CsrcParser</span>
+
+<span class="n">spiders</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">EastmoneyParser</span><span class="p">(),</span> <span class="c">#东方财富网</span>
+    <span class="n">IfengParser</span><span class="p">(),</span>     <span class="c">#凤凰财经</span>
+    <span class="n">GubaParser</span><span class="p">(),</span>      <span class="c">#股吧论坛</span>
+    <span class="n">CsrcParser</span><span class="p">()</span>       <span class="c">#证监会新闻发布页面</span>
+<span class="p">]</span>
+
+<span class="n">currentIndex</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">spiders</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">nextSpider</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">currentIndex</span>
+    <span class="n">spider</span> <span class="o">=</span> <span class="n">spiders</span><span class="p">[</span><span class="n">currentIndex</span><span class="p">]</span>
+    <span class="n">currentIndex</span> <span class="o">=</span> <span class="p">(</span><span class="n">currentIndex</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">count</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">currentIndex</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">spider</span>
+</code></pre></div></div>
+
+<p>因为新闻可能来源于多个渠道，所以创建一个爬虫容器保存<code class="highlighter-rouge">spider</code>对象，每个爬虫对象实现自己的解析器就可以了，这样也方便后续添加其他新闻爬虫渠道，只需要实现要增加的爬虫对象并在容器中扩展就可以了。<code class="highlighter-rouge">nextSpider</code>方法简单实现了对于已有爬虫的轮询。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Spider</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="s">'''spider base class'''</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">home_url</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Spider</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">home_url</span> <span class="o">=</span> <span class="n">home_url</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">'User-Agent'</span><span class="p">]</span> <span class="o">=</span> <span class="n">USER_AGENT</span>
+
+    <span class="k">def</span> <span class="nf">download_text</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">'''get raw text such as html、json、or so on'''</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">home_url</span><span class="p">)</span>
+        <span class="n">resp</span><span class="o">.</span><span class="n">encoding</span> <span class="o">=</span> <span class="s">"utf-8"</span>
+        <span class="k">return</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span>
+
+    <span class="k">def</span> <span class="nf">get_weibo_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</code></pre></div></div>
+
+<p>在创建<code class="highlighter-rouge">Spider</code>对象时，由于定义了解析的属性，所以只需要注入不同的解析对象，就能解析不同的网站内容了。目前只实现了<strong><em>东方财富网</em></strong>、<strong><em>凤凰财经</em></strong>、<strong><em>股吧论坛</em></strong>、<strong><em>证监会新闻发布</em></strong>页面的爬虫，如果后续扩展其它的媒体渠道，只要实现相应的<code class="highlighter-rouge">Parser</code>类，并在容器中添加即可。以<strong><a href="https://emwap.eastmoney.com/">东方财富网的wap版</a></strong>为例（wap版页面元素较少，比较容易定位），如下：</p>
+
+<p><img src="http://pdsw7h3kf.bkt.clouddn.com/2018-09-14-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-14%20%E4%B8%8B%E5%8D%886.48.19.png" alt="" /></p>
+
+<p>可以看到，我们需要的新闻类型（今日聚焦）在<code class="highlighter-rouge">comm-list</code>的class中，每个<code class="highlighter-rouge">dd</code>标签中包含一条新闻，我们只要定位到所有的<code class="highlighter-rouge">a</code>标签，并将<code class="highlighter-rouge">a</code>标签的<code class="highlighter-rouge">text</code>内容解析出来即为新闻的title，<code class="highlighter-rouge">href</code>解析出来即为新闻的链接，当然这里需要使用根url进行拼接一下，这两部分的组合即构成了我们微博的内容。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span>
+<span class="kn">import</span> <span class="nn">bs4</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">spider.spider</span> <span class="kn">import</span> <span class="n">Spider</span>
+<span class="kn">from</span> <span class="nn">weibo.weibo_message</span> <span class="kn">import</span> <span class="n">WeiboMessage</span>
+
+<span class="n">HOME_URL</span> <span class="o">=</span> <span class="s">"https://emwap.eastmoney.com"</span>
+
+
+<span class="k">class</span> <span class="nc">EastmoneyParser</span><span class="p">(</span><span class="n">Spider</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">EastmoneyParser</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="n">HOME_URL</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_weibo_message</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">html</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">download_text</span><span class="p">()</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="s">"html.parser"</span><span class="p">)</span>
+        <span class="n">div</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s">"class"</span><span class="p">:</span> <span class="s">"comm-list"</span><span class="p">})</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="n">div</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'dd'</span><span class="p">)</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s">''</span>
+        <span class="n">weiboList</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>        
+            <span class="k">for</span> <span class="n">item_num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">items</span><span class="p">)):</span>
+                <span class="n">item</span> <span class="o">=</span> <span class="n">items</span><span class="p">[</span><span class="n">item_num</span><span class="p">]</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="c"># 证监会 深交所 上交所 沪深 证券 央行 监管</span>
+                <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">u'^</span><span class="se">\u8bc1\u76d1\u4f1a</span><span class="s">'</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="ow">or</span> \
+                   <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">u'^</span><span class="se">\u6df1\u4ea4\u6240</span><span class="s">'</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="ow">or</span> \
+                   <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">u'^</span><span class="se">\u4e0a\u4ea4\u6240</span><span class="s">'</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="ow">or</span> \
+                   <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">u'^</span><span class="se">\u6caa\u6df1</span><span class="s">'</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="ow">or</span> \
+                   <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">u'^</span><span class="se">\u8bc1\u5238</span><span class="s">'</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="ow">or</span> \
+                   <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">u'^</span><span class="se">\u592e\u884c</span><span class="s">'</span><span class="p">,</span> <span class="n">title</span><span class="p">)</span> <span class="ow">or</span> \
+                   <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">u'^</span><span class="se">\u76d1\u7ba1</span><span class="s">'</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span> 
+                    <span class="n">url</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'href'</span><span class="p">)</span>
+                    <span class="n">url</span> <span class="o">=</span> <span class="n">HOME_URL</span> <span class="o">+</span> <span class="n">url</span>
+                    <span class="n">msg</span> <span class="o">=</span> <span class="s">"</span><span class="si">%</span><span class="s">s </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+                    <span class="n">weiboList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">WeiboMessage</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">weiboList</span>
+</code></pre></div></div>
+
+<p>使用re模块对新闻的标题做一个简单的匹配过滤，这里已定义好一些关键字，就直接写在了程序中，如果后续关键字比较多可以优化成字典</p>
+
+<p>一次爬虫可以获取并构建<code class="highlighter-rouge">0-n</code>条微博内容，最后将所有的微博消息列表以<code class="highlighter-rouge">list</code>返回。在发送引擎类中使用方法<code class="highlighter-rouge">sendWeibo</code>调用spider对象中的<code class="highlighter-rouge">get_weibo_message</code>，获取爬到的微博消息<code class="highlighter-rouge">list</code>，逐条发送微博即可，间隔3秒以防止被屏蔽。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SendTask</span><span class="p">(</span><span class="n">Thread</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">http</span><span class="p">,</span> <span class="n">uid</span><span class="p">):</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stopped</span> <span class="o">=</span> <span class="n">Event</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sender</span> <span class="o">=</span> <span class="n">WeiboSender</span><span class="p">(</span><span class="n">http</span><span class="p">,</span> <span class="n">uid</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">"starting web comment task...</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sendWeibo</span><span class="p">()</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">stopped</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">TIME_SLOG</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sendWeibo</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">"end web comment task...</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stopped</span><span class="o">.</span><span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">sendWeibo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">spider</span> <span class="o">=</span> <span class="n">spider_factory</span><span class="o">.</span><span class="n">nextSpider</span><span class="p">()</span>
+        <span class="n">weiboList</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">weiboList</span> <span class="o">=</span> <span class="n">spider</span><span class="o">.</span><span class="n">get_weibo_message</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">weibo</span> <span class="ow">in</span> <span class="n">weiboList</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sender</span><span class="o">.</span><span class="n">send_weibo</span><span class="p">(</span><span class="n">weibo</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s">"wait 3 second</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>发送微博的接口实现参考了网上的方法，修改后增加了上传图片的功能（不过貌似在我们正经的需求中也用不到），详细的代码后面将托管到github上。</p>
+
+<h3 id="自动登录自动点赞自动评论拍照留念">自动登录+自动点赞+自动评论+拍照留念</h3>
+
+<p>这个流程，听起来，特别地像做自动化测试的同学，所以，web自动化测试框架<strong><a href="http://www.baidu.com/link?url=oiUuI9A5ZzMupj_DtzxeWSSY0uf0tk9hSvsUyC-mN9_XRETWy7FyWNtETaaUhuDr"><em>Selenium</em></a></strong>，你值得拥有。<code class="highlighter-rouge">Selenium</code>测试直接运行在浏览器中，就像真正的用户在操作一样，可以测试与各类浏览器的兼容性。支持的浏览器包括IE（7, 8, 9, 10, 11），Mozilla Firefox，Safari，Google Chrome，Opera等</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 install selenium
+</code></pre></div></div>
+
+<p>准备你本地的driver，我用的是chrome，查看chrome对应的版本</p>
+
+<p><img src="http://pdsw7h3kf.bkt.clouddn.com/2018-09-14-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-14%20%E4%B8%8B%E5%8D%887.44.43.png" alt="" /></p>
+
+<p>并选择对该版本支持的<a href="http://npm.taobao.org/mirrors/chromedriver/">chromedriver</a></p>
+
+<p><img src="http://pdsw7h3kf.bkt.clouddn.com/2018-09-14-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-14%20%E4%B8%8B%E5%8D%887.48.39.png" alt="" /></p>
+
+<p><code class="highlighter-rouge">nodes</code>文本文件中包含了版本支持说明</p>
+
+<p><img src="http://pdsw7h3kf.bkt.clouddn.com/2018-09-14-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-14%20%E4%B8%8B%E5%8D%887.49.28.png" alt="" /></p>
+
+<h3 id="login-1">login</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">driver_login</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">driver_location</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">passwd</span><span class="p">):</span>
+    <span class="s">""" 使用webdriver登录： 
+    url-登录地址
+    driver_location-本地driver路径
+    username-用户名
+    passwd-密码 """</span>
+    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">driver_location</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">maximize_window</span><span class="p">()</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">implicitly_wait</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+ <span class="c">#  driver.find_element_by_id("loginName").clear()</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">"loginName"</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">"loginPassword"</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">passwd</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_id</span><span class="p">(</span><span class="s">"loginAction"</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">driver</span>
+</code></pre></div></div>
+
+<p>在登录时使用<code class="highlighter-rouge">webdriver.Chrome()</code>初始化一个<code class="highlighter-rouge">driver</code>，通过元素定位（通过<code class="highlighter-rouge">id</code>）找到登录框并发送用户名密码后提交，将driver返回。元素定位方法有多种，根据页面的具体情况可搭配使用，后面将会有其它示例。</p>
+
+<h3 id="praise--comment">praise &amp; comment</h3>
+
+<p>自动点赞与自动评论的过程在<code class="highlighter-rouge">weibo_process_handler</code>中实现</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">weibo_process_handler</span><span class="p">():</span>
+    <span class="s">""" 处理发送后的微博： 自动为已发微博点赞   自动发送评论   调用capture方法生成截图 """</span>
+    
+    <span class="n">driver</span> <span class="o">=</span> <span class="n">driver_login</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">DRIVER_LOCATION</span><span class="p">,</span> <span class="n">USER_NAME</span><span class="p">,</span> <span class="n">PASSWD</span><span class="p">)</span>
+    
+    <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">'//*[@id="app"]/div[1]/div[1]/div[1]/div[1]'</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+   <span class="c"># ActionChains(driver).move_to_element(top)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">count_like</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">count_weibo</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+        <span class="c">#try:</span>
+        <span class="c"># 等待页面加载出赞</span>
+        <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">expected_conditions</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s">'//*[@id="app"]/div[1]/div['</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">count_weibo</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="s">']/div/div/footer/div[3]/i'</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="c">#找到赞的元素并发送点击</span>
+        <span class="n">like_btn</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">'//*[@id="app"]/div[1]/div['</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">count_weibo</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="s">']/div/div/footer/div[3]/i'</span><span class="p">)</span>
+        <span class="n">like_btn</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">count_like</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c">#找到评论的元素并点击</span>
+
+        <span class="n">comment_btn</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">'//*[@id="app"]/div[1]/div['</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">count_weibo</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="s">']/div/div/footer/div[2]/i'</span><span class="p">)</span>
+        <span class="n">comment_btn</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+
+        <span class="c">#定位到评论框并发送评论文字</span>
+        <span class="k">if</span> <span class="n">findElementByXpath</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span><span class="s">'//*[@id="app"]/div[1]/div/main/div[1]/div/span/textarea[1]'</span><span class="p">):</span>
+            <span class="n">comment_input</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">'//*[@id="app"]/div[1]/div/main/div[1]/div/span/textarea[1]'</span><span class="p">)</span>
+            <span class="n">comment_input</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">choice</span><span class="p">(</span><span class="n">comment</span><span class="p">))</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">findElementByXpath</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="s">'//*[@id="app"]/div[1]/div/header/div[3]/a'</span><span class="p">):</span>
+                <span class="n">ActionChains</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">'//*[@id="app"]/div[1]/div/header/div[3]/a'</span><span class="p">))</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+
+        <span class="k">elif</span> <span class="n">findElementByXpath</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span><span class="s">'//*[@id="app"]/div[1]/div/div[5]/div/div[1]/span'</span><span class="p">):</span>
+            <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">'//*[@id="app"]/div[1]/div/div[5]/div/div[1]/span'</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+
+            <span class="n">comment_input</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">'//*[@id="app"]/div[1]/div/div[5]/div/div/div/div[1]/textarea[1]'</span><span class="p">)</span>
+            <span class="n">comment_input</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">choice</span><span class="p">(</span><span class="n">comment</span><span class="p">))</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+            <span class="n">ActionChains</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="s">'//*[@id="app"]/div[1]/div/div[5]/div/div/div/div[2]/button'</span><span class="p">))</span><span class="o">.</span><span class="n">perform</span><span class="p">()</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+            <span class="c">#back_btn = driver.find_element_by_xpath('//*[@id="app"]/div[1]/div/div[1]/div[1]/i')</span>
+            <span class="c">#back_btn.click()</span>
+            <span class="n">driver</span><span class="o">.</span><span class="n">back</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">'textarea is not found'</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">False</span>
+                  
+        <span class="k">print</span><span class="p">(</span><span class="n">count_like</span><span class="p">)</span>
+        
+        <span class="c"># 创建截图的存储路径，以时间方式命名</span>
+        <span class="n">current_time_short</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d"</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span>
+        <span class="n">crnt_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">'.'</span><span class="p">)</span>    
+        <span class="n">pic_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">crnt_path</span><span class="p">,</span> <span class="s">'result'</span><span class="p">,</span> <span class="n">current_time_short</span><span class="p">)</span>
+        <span class="n">isExists</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">pic_path</span><span class="p">)</span>
+        <span class="c"># 如果路径不存在，创建路径</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">isExists</span><span class="p">:</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">pic_path</span><span class="p">)</span>
+        <span class="c"># 创建截图的命名，以“年-月-日-时-分-秒”的时间格式命名，以png为后缀 </span>
+        <span class="n">current_time_long</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d-</span><span class="si">%</span><span class="s">H_</span><span class="si">%</span><span class="s">M_</span><span class="si">%</span><span class="s">S"</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span>          
+        <span class="n">pic_path_test</span> <span class="o">=</span> <span class="n">pic_path</span> <span class="o">+</span> <span class="s">'/'</span> <span class="o">+</span> <span class="n">current_time_long</span> <span class="o">+</span> <span class="s">'.png'</span>
+
+        <span class="c">#每隔1s定位微博个人页面元素，防止元素暂没有加载出来，超时时间为5s</span>
+        <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="mi">5</span> <span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">until</span><span class="p">(</span><span class="n">expected_conditions</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">XPATH</span><span class="p">,</span> <span class="s">'//*[@id="app"]/div[1]/div['</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">count_weibo</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="s">']/div/div/footer/div[3]/i'</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="c">#保存截图</span>
+        <span class="n">driver</span><span class="o">.</span><span class="n">get_screenshot_as_file</span><span class="p">(</span><span class="n">pic_path_test</span><span class="p">)</span>
+    <span class="c">#driver.refresh()</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="c">#capture(driver, 1920, 906, pic_path)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>在处理点赞、评论、返回个人页面时，网络状态可能会影响到元素加载的速度，可以使用WebDriverWait()方法来等待元素的加载</p>
+
+<p><img src="http://pdsw7h3kf.bkt.clouddn.com/2018-09-15-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-15%20%E4%B8%8B%E5%8D%886.24.51.png" alt="" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>driver</th>
+      <th>传入WebDriver实例，即我们上例中的driver</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>timeout</strong></td>
+      <td><strong>超时时间，等待的最长时间（同时要考虑隐性等待时间）</strong></td>
+    </tr>
+    <tr>
+      <td><strong>poll_frequency</strong></td>
+      <td><strong>调用until或until_not中的方法的间隔时间，默认是0.5秒</strong></td>
+    </tr>
+    <tr>
+      <td><strong>ignored_exceptions</strong></td>
+      <td><strong>忽略的异常，如果在调用until或until_not的过程中抛出这个元组中的异常，则不中断代码，继续等待，如果抛出的是这个元组外的异常，则中断代码，抛出异常。默认只有NoSuchElementException</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>查找元素时有部分使用了<code class="highlighter-rouge">find_element_by_xpath</code>方法，即通过元素的xpath定位，该方法失败将直接抛出异常，我们将该方法封装一下，直接根据返回值在程序中实现逻辑控制。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">findElementByXpath</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+    <span class="n">flag</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">driver</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">flag</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">flag</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="n">flag</span>
+</code></pre></div></div>
+
+<h3 id="mail-delivery">mail delivery</h3>
+
+<p>使用<code class="highlighter-rouge">import smtplib</code>可以很方便地以附件方式发送截图，留坑待填</p>
+
+<p>btw，要注意使用网易邮箱发送时，需要使用客户端授权码代替密码，否则会出现535报错。</p>
+
+<h3 id="in-the-end">In the end</h3>
+
+<p>最后发送出的微博消息与截图大致如下左半部分所示，给自己的页面也点个赞😂</p>
+
+<p><img src="http://pdsw7h3kf.bkt.clouddn.com/2018-09-15-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-09-15%20%E4%B8%8B%E5%8D%886.49.07.png" alt="" /></p>
+
+
+  <!-- 引入share模块 -->
+  
+
+<!-- share.js -->
+<script src="/assets/js/social-share.min.js"></script>
+<script>
+  socialShare('.social-share', {
+    sites: [
+      
+    ],
+    wechatQrcodeTitle: "分享到微信朋友圈",
+    wechatQrcodeHelper: '期待在朋友圈见到这篇文章'
+  });
+</script>
+
+</div>
+
+<!-- 底部锚点 -->
+<a id="htmldown" name="htmldown"></a>
+<!-- 引入评论模块 -->
+
+
+
+
+
+
+<!-- 引入goto模块 -->
+<div class="bounceInRight animated go">
+  <a title="顶部切换页面" class="gototop" href="#htmlup" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Top
+    </div>
+  </a>
+  <a title="底部有评论哦" class="gotobottom" href="#htmldown" target="_self">
+    <div class="box" style="font-family:'ffad_matroregular';">
+        Foot
+    </div>
+  </a>
+</div>
+
+<!-- 引入页面底部模块 -->
+<footer id="bottom">
+  <br>
+  <span>Jingchao's Party ©
+  
+  
+    
+    -
+  
+  2018
+  <br>
+  Powered by <a href="https://www.jekyll.com.cn/">Jekyll</a></span>
+</footer>
+
+
+<!-- 引用wow.js的动画效果 -->
+<script src="/assets/js/wow.js"></script>
+<script>
+    var wow = new WOW({
+        boxClass: 'wow',
+        animateClass: 'animated',
+        // offset: 600,
+        mobile: true,
+        live: true
+    });
+    wow.init();
+</script>
+<!-- 页面刷新回到顶部 -->
+<script>
+    window.onbeforeunload = function(){
+        //刷新后页面自动回到顶部
+        document.documentElement.scrollTop = 0;  //ie下
+        document.body.scrollTop = 0;  //非ie
+    }
+</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
