@@ -1,3 +1,4 @@
+---
 layout: post
 
 title: "MySQL-Note-2：从update语句看日志系统"
@@ -11,6 +12,9 @@ cover: 'https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2019-03-29-MySQL-
 color: rgb(512,215,333)
 
 tags: [MySQL]
+---
+
+
 
 ##### 每次开始前的絮叨
 
