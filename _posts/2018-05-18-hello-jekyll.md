@@ -28,4 +28,4 @@ Throughout this guide there are a number of small-but-handy pieces of informatio
 
 ### Video Test
 
-<embed src='http://player.youku.com/player.php/sid/XNDE4MDMwMTM2MA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+<embed src='http://player.youku.com/player.php/sid/XNDE4MDMwMTM2MA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'> </embed>
