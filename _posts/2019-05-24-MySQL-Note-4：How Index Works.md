@@ -9,7 +9,7 @@ description:
 
 cover: 'https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2019-03-29-MySQL-header.png'
 
-color: rgb(432,315,533)
+color: rgb(232,115,233)
 
 tags: [MySQL]
 ---
