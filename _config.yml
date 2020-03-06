@@ -7,7 +7,7 @@ url: 'https://jingchao.org.cn' # your host
 
 # nav 中文字符空格：&emsp;
 nav: # 最佳体验 六个标签 且最好每个标签不超过4中文字
-  首页: '/'
+  home: '/'
   tags: '/tags.html'
   timeline: '/timeline.html'
   about: '/about.html'
@@ -33,12 +33,12 @@ SNS-icon: #['facebook', 'weibo', 'QQ', 'github', 'Dribbble', 'twitter', 'instagr
   #instagram: ''
   #twitter: ''
   github: ''
-  Dribbble: ''
+  #Dribbble: ''
   #facebook: ''
   #Google: ''
   zhihu: ''
   juejin: ''
-  twitch: ''
+  #twitch: ''
 
 # 分页
 paginate: 4
@@ -59,8 +59,7 @@ pygmentsTheme: 'default'
 
 # 友情链接
 friends:
-  jekyll: 'https://www.jekyll.com.cn/'
-  test: 'http://pdsw7h3kf.bkt.clouddn.com/2018-08-31-1331535702513_.pic.jpg'
+  Jangwooning: 'https://guangningsun.github.io/'
 
 # 评论 最佳体验 在disqus、livere和Gitment之间三选一
 # disqus 评论
