@@ -18,9 +18,9 @@ author: true
 name: 'Jingchao'
 NickName: '景超'
 webtitle: 'Jingchao'
-bio: '这个人可能没有什么有趣的地方'
+bio: '还是少年...吗'
 about: true
-aboutyou: '也没有什么值得介绍...'
+aboutyou: '这不是作业本，而是他乱写乱画的地方。有意见的放学别走，可以下面找我👇 哈哈哈哈'
 portraits: '/assets/img/chenjingchao.jpg' # your portraits image file path
 
 # SNS
@@ -76,7 +76,7 @@ client_id: ''  # 注册 OAuth Application 后获得的 client_id
 client_secret: ''  # 注册 OAuth Application 后获得的 client_secret
 
 # Share : weibo, qq, wechat, tencent, douban, qzone, linkedin, diandian, facebook, twitter, google
-social-share: true
+social-share: false
 social-share-items: ['qq', 'wechat', 'weibo', 'twitter', 'facebook']
 
 # 百度统计 在baidu-url里填写自己相关的url代码
