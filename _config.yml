@@ -18,26 +18,26 @@ author: true
 name: 'Jingchao'
 NickName: '景超'
 webtitle: 'Jingchao'
-bio: '还是少年...吗'
+bio: '成熟很好，但没劲呀。'
 about: true
-aboutyou: '这不是作业本，而是他乱写乱画的地方。有意见的放学别走，可以下面找我👇 哈哈哈哈'
+aboutyou: '这又不是作业本，所以可以乱写乱画'
 portraits: '/assets/img/chenjingchao.jpg' # your portraits image file path
 
 # SNS
 SNS: true
 SNS-icon: #['facebook', 'weibo', 'QQ', 'github', 'Dribbble', 'twitter', 'instagram', 'weixin']
-  mail: 'mailto:alfred.chen007@gmail.com'
-  weixin: 'http://pdsw7h3kf.bkt.clouddn.com/2018-08-31-1331535702513_.pic.jpg' # your wechat image file path
-  QQ: 'http://pdsw7h3kf.bkt.clouddn.com/2018-08-31-1341535702950_.pic.jpg' # your QQ image file path
+  mail: 'mailto:chenjingchao@126.com'
+  weixin: 'https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-03-09-1351583717097_.pic_hd.jpg' # your wechat image file path
+  #QQ: 'http://pdsw7h3kf.bkt.clouddn.com/2018-08-31-1341535702950_.pic.jpg' # your QQ image file path
   weibo: 'https://weibo.com/carlybb'
   #instagram: ''
   #twitter: ''
-  github: ''
+  #github: ''
   #Dribbble: ''
   #facebook: ''
   #Google: ''
-  zhihu: ''
-  juejin: ''
+  #zhihu: ''
+  #juejin: ''
   #twitch: ''
 
 # 分页
