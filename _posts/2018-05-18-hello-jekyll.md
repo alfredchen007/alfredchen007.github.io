@@ -29,3 +29,6 @@ Throughout this guide there are a number of small-but-handy pieces of informatio
 ### Video Test
 <iframe type="text/html" height="299" width="306" src="http://player.youku.com/embed/XNDE4MDMwMTM2MA==" frameborder="0"> </iframe>
 
+### Music Test
+<p>https://jc-1258611203.cos.ap-beijing.myqcloud.com/audio/music/%E5%8F%B8%E5%8D%97%20-%20%E5%86%AC%E7%9C%A0.mp3</p>
+
