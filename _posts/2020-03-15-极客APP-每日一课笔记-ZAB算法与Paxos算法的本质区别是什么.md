@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "极客APP-每日一课笔记-如何写好一个java单例模式"
+title: "极客APP-每日一课笔记-ZAB算法与Paxos算法的本质区别是什么"
 
 date: 2020-03-15 13:52:40 +0300
 
@@ -15,6 +15,8 @@ tags: [NoTAG]
 ---
 
 **主讲 金嘉怡 某知名互联网公司高级研发工程师 **
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-03-15-%E6%88%AA%E5%B1%8F2020-03-15%E4%B8%8B%E5%8D%883.24.46.png)
 
 ## ZAB 与 Paxos
 
@@ -90,7 +92,7 @@ ZAB算法引入了ZXID，解决了事务操作如何保证全局有序的难题�
 | Raft选举算法    | 相对Paxos协议上的简化    | Redis适用Raft实现了自己的分布式一致性，Raft本身和Paxos并没有场景上的区别，更多的是协议上的简化，使得其实现起来工程量会小很多 |
 | ZAB原子广播协议 | 适用于离线的海量数据处理 | 例如Hadoop利用Zookeeper保证数据副本的一致性                  |
 | Hash路由        | 请求路由                 | ElasticSearch集群接收到为文档创建索引的请求时，需要选择在哪一个Shard上对文档进行索引，这里的Shard是指某一个完整且独立的Lucene索引实例。ElasticSearch采用的是djb2哈希算法，俗称times33，可以简单表示为hash(key)%n，也就是对要索引的文档中默认或指定的key进行哈希操作，然后再对ES集群中Shard的数量n进行取模进而完成请求路由的操作 |
-| 一致性Hash算法  | 负载均衡                 | HaProxy使用一致性Hash算法，是用于对服务器连接进行负载均衡的算法。最新的进展是Google近几年发表的一篇有界负载的一致性Hash算法论文：，这篇论文设计的新算法保证了负载均衡一致性和稳定性的同时，在均衡性方面也做出了实质性地改进，之后在HaProxy项目中得以应用，并被证实能显著地节省缓存带宽 |
+| 一致性Hash算法  | 负载均衡                 | HaProxy使用一致性Hash算法，是用于对服务器连接进行负载均衡的算法。最新的进展是Google近几年发表的一篇有界负载的一致性Hash算法论文 [Consistent Hashing with Bounded Loads](https://arxiv.org/abs/1608.01350)，这篇论文设计的新算法保证了负载均衡一致性和稳定性的同时，在均衡性方面也做出了实质性地改进，之后在HaProxy项目中得以应用，并被证实能显著地节省缓存带宽 |
 | Gossip闲话算法  | 最终一致性               | Gossip主要被Cassandra应用于实现它的分布式一致性特性，因为Cassandra框架更看重去中心化和容错的特性，在不违背CAP定理的前提下，只能接受了最终一致性 |
 
 
