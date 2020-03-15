@@ -1,0 +1,90 @@
+---
+layout: post
+
+title: "AWS+V2ray科学上网时网络不通问题 failed to process outbound traffic"
+
+date: 2020-03-15 18:48:40 +0300
+
+description:  
+
+cover: 'https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-03-15-%E6%88%AA%E5%B1%8F2020-03-15%E4%B8%8B%E5%8D%888.00.53.png'
+
+color: rgb(252,206,178)
+
+tags: [NoTAG]
+---
+
+`failed to process outbound traffic > v2ray.com/core/proxy/vmess/outbound: failed to find an available destination` 
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-03-15-%E6%88%AA%E5%B1%8F2020-03-15%E4%B8%8B%E5%8D%888.00.53.png)
+
+### 科学上网
+
+今天突然需要跳一下墙，发现自己年前在心阶上买的ssr服务已经被墙了，准备上去换个线路，发现心阶.club的主站貌似也暂时不能用了。工作后本来也没有太多的需求，但是突然想要查个东西时，就是这么滴痛苦，仿佛能听见哗哗如泉涌的灵感在不断更换ssr路线中慢慢枯竭的声音。2020年了，就搞个VPS，让我们随时随地，真正的使用互联网吧。
+
+### AWS + V2ray + V2rayU（或V2rayX）
+
+VPS服务商可选的比较多了，一分钱一分货，看了一眼搬瓦工都已经涨到60$左右了。。ORZ
+
+于是在Jangwooning同学的推荐下，发现亚马逊的AWS注册账号第一年可以选用免费的微型实例服务，这对于我们部署V2ray小服务来说已经杠杠滴够了，而且第一年免费，有充足的时间去试用各种功能，续费也算良心。
+
+V2ray在github上有一键部署的脚本
+
+mac上选用V2ray的客户端V2rayX和V2rayU都可以
+
+搭建就不记录了，主要是记录一下刚刚部署好后的一个连接问题的解决以作备忘
+
+### 备忘
+
+在V2rayX上配置好了服务器端的信息，导入的VMESS配置貌似不能兼容所有客户端（对windows下的应该好一些），于是手动配置了一下，主要是以下几项信息别填错
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-03-15-%E6%88%AA%E5%B1%8F2020-03-15%E4%B8%8B%E5%8D%887.09.28.png)
+
+配置好后赶紧试了一下，发现连接不上。
+
+以为是客户端问题，于是换了V2rayU，发现还是不行
+
+于是trace了一下日志，发现如下
+
+```
+020/03/15 18:36:03 [Info] [311394039] v2ray.com/core/transport/internet/tcp: dialing TCP to tcp:
+2020/03/15 18:36:20 [Info] [311394039] v2ray.com/core/transport/internet/tcp: dialing TCP to tcp:
+2020/03/15 18:36:37 [Info] [311394039] v2ray.com/core/transport/internet/tcp: dialing TCP to tcp:
+2020/03/15 18:36:53 [Warning] [311394039] v2ray.com/core/app/proxyman/outbound: failed to process outbound traffic > v2ray.com/core/proxy/vmess/outbound: failed to find an available destination > v2ray.com/core/common/retry: [dial tcp : i/o timeout] > v2ray.com/core/common/retry: all retry attempts failed
+2020/03/15 18:36:53 [Info] [311394039] v2ray.com/core/app/proxyman/inbound: connection ends > v2ray.com/core/proxy/socks: connection ends > v2ray.com/core/proxy/socks: failed to transport all TCP response > io: read/write on closed pipe
+```
+
+看到 failed to process outbound traffic > v2ray.com/core/proxy/vmess/outbound: failed to find an available destination 
+
+那估计是TCP三次握手🤝都没成功啊，还真是错怪了V2rayX。。
+
+于是第一时间想到去EC2上关墙
+
+我选的是 redhat 8（AWS给的免费选择里还有Ubuntu和Debian，如果再给我一次机会我会选择Debian，因为可以自动开启配置BBR。。），终端登进去后一顿 systemctl stop 操作，发现人家实例上根本就没有firewalld和iptables的进程。。。
+
+然鹅我的mac以前经常翻墙上网，网络配置最近也没改过，EC2实例也没开墙，所以问题只能出现在这中间。于是登录AWS的console，发现在网络与安全的选项下，有一个 Security Groups 的选项，后面还打了一个New的标签
+
+
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-03-15-%E6%88%AA%E5%B1%8F2020-03-15%E4%B8%8B%E5%8D%887.36.21.png)
+
+
+
+点进去找到实例所属的安全组，可以通过 Group ID 再点击进去，可看到底下有inbound和outbound规则，其中inbound规则默认为仅对ssh协议的22端口开放。果断把TCP协议的0到65535端口全都打开
+
+
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-03-15-%E6%88%AA%E5%B1%8F2020-03-15%E4%B8%8B%E5%8D%887.41.32.png)
+
+
+
+再试一下。。。 
+
+哦了，选的 US East (Ohio) 线路， 速度杠杠滴。。
+
+**科学上网，健康生活**
+
+
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-03-15-38951584269028_.pic_hd.jpg)
+
