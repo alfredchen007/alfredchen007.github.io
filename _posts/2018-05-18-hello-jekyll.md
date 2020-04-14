@@ -26,6 +26,12 @@ Jekyll is a simple, blog-aware, static site generator. It takes a template direc
 
 Throughout this guide there are a number of small-but-handy pieces of information that can make using Jekyll easier, more interesting, and less hazardous. Here’s what to look out for.
 
-### Video Test
+### Video Test NEW
 
 <iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
+
+
+<video width="480" height="320" controls="controls">
+  <source src="https://jc-1258611203.cos.ap-beijing.myqcloud.com/video/1573625679037.mp4" type="video/mp4">
+</video>
+
