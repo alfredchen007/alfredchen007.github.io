@@ -1,0 +1,79 @@
+---
+layout: post
+
+title: "mac终端解决方案Terminal+zch+oh_my_zsh+powerlevel10k"
+
+date: 2020-04-21 22:52:21 +0300
+
+description:  
+
+cover: 'https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-04-21-%E6%88%AA%E5%B1%8F2020-04-22%E4%B8%8A%E5%8D%8812.17.44.png'
+
+color: rgb(191,144,82)
+
+tags: [NoTAG]
+---
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-04-21-%E6%88%AA%E5%B1%8F2020-04-22%E4%B8%8A%E5%8D%8812.17.44.png)
+
+最近使用 mac 原生终端 Terminal 频率增加，以前的 bash 配置有点乱，加上最近有些用眼过度，感觉稍微长一点点的文件路径都能把我给晃瞎。。于是 Terminal + zsh + oh my zch + powerlevel10k，改善一下终端体验，度过这段用 mac 进行办公的别扭时间吧
+
+## zsh
+
+mac 应该是自带了 zsh，可以查看预装的情况
+
+```shell
+cat /etc/shells
+```
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-04-21-%E6%88%AA%E5%B1%8F2020-04-21%E4%B8%8B%E5%8D%8810.46.25.png)
+
+所以在默认使用 bash 的情况下，可以直接`chsh -s /bin/zsh`切换到 zsh，输入密码后切换成功
+
+
+
+## oh my zsh
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-04-21-%E6%88%AA%E5%B1%8F2020-04-21%E4%B8%8B%E5%8D%8810.44.55.png)
+
+## powerlevel10k
+
+```shell
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+```
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-04-21-%E6%88%AA%E5%B1%8F2020-04-21%E4%B8%8B%E5%8D%8811.07.53.png)
+
+Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-04-21-%E6%88%AA%E5%B1%8F2020-04-21%E4%B8%8B%E5%8D%8811.10.56.png)
+
+## Nerd-Fonts 
+
+参考 github 地址：https://github.com/ryanoasis/nerd-fonts#font-installation
+
+> Best option if on **macOS** and want to use **Homebrew**.
+
+All fonts are available via [Homebrew Cask Fonts](https://github.com/Homebrew/homebrew-cask-fonts) on macOS (OS X)
+
+```shell
+brew tap homebrew/cask-fonts
+brew cask install font-hack-nerd-font
+```
+
+但是鉴于国内 homebrew 的速度，不如直接下载 https://github.com/source-foundry/Hack#quick-installation
+
+macOS 下解压 zip 后可以直接双击字体文件安装
+
+在终端里配置字体
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-04-21-%E6%88%AA%E5%B1%8F2020-04-21%E4%B8%8B%E5%8D%8811.55.21.png)
+
+## Terminal 变成小清新
+
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2020-04-21-%E6%88%AA%E5%B1%8F2020-04-22%E4%B8%8A%E5%8D%8812.12.12.png)
+
