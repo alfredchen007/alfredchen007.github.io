@@ -31,7 +31,7 @@ Throughout this guide there are a number of small-but-handy pieces of informatio
 <iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
 
 
-<video width="480" height="320" controls="controls">
+<video max-width=100% height=auto controls="controls">
   <source src="https://jc-1258611203.cos.ap-beijing.myqcloud.com/video/1573625679037.mp4" type="video/mp4">
 </video>
 
