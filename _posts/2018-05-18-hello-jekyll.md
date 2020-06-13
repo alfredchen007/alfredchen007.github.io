@@ -28,7 +28,7 @@ Throughout this guide there are a number of small-but-handy pieces of informatio
 
 ### Video Test NEW
 
-<video max-width="100%" height="auto" controls="controls">
+<video width="100%" height="auto" controls="controls">
   <source src="https://jc-1258611203.cos.ap-beijing.myqcloud.com/video/1573625679037.mp4" type="video/mp4">
 </video>
 
