@@ -1,0 +1,19 @@
+<hr>
+  <div id="comments"></div>
+  <!--Leancloud 操作库:-->
+  <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+  <!--Valine 的核心代码库:-->
+  <script src="//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+  <script>
+      new Valine({
+          av: AV,
+          el: '#comments',
+          app_id: '{{ site.valine.appid }}',
+          app_key: '{{ site.valine.appkey }}',
+          placeholder: '{{ site.valine.placeholder }}',
+          recordIP: '{{ site.valine.recordIP }}',
+          enableQQ: '{{ site.valine.enableQQ }}',
+      })
+  </script>
+  
+
