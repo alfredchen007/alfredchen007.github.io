@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: "排查 ksmtuned process consuming 100% CPU"
+title: "排查ksmtuned导致cpu占用问题"
 
 date: 2022-11-07 12:59:48 +0300
 
