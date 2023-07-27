@@ -7,15 +7,14 @@ date: 2023-07-25
 
 description:  
 
-cover: ’https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2023-07-27-FYvw1rAKx9EVpGW.png‘
+cover: ’https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2023-07-27-%E6%88%AA%E5%B1%8F2023-07-27%20%E4%B8%8B%E5%8D%884.30.17.png‘
 
 color: rgb(222,315,333)
 
 tags: [Jekyll]
 ---
 
- ![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2023-07-27-FYvw1rAKx9EVpGW.png)
-
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2023-07-27-%E6%88%AA%E5%B1%8F2023-07-27%20%E4%B8%8B%E5%8D%884.30.17.png)
 ### Valine
 
 最早支持的 disqus 因为 dddd 的原因已经不能用了，后来换成了来必力，一款韩国的评论系统，支持多个 SNS 登陆，用了好久一段时间，因为博客也没人看一般就是自用记录，所以就没有太关注。昨天网页端打开发现来必力的广告太难看了，所以准备换成无后端的 Valine 评论系统。
