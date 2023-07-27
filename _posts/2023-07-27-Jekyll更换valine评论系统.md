@@ -20,7 +20,7 @@ tags: [Jekyll]
 
 最早支持的 disqus 因为 dddd 的原因已经不能用了，后来换成了来必力，一款韩国的评论系统，支持多个 SNS 登陆，用了好久一段时间，因为博客也没人看一般就是自用记录，所以就没有太关注。昨天网页端打开发现来必力的广告太难看了，所以准备换成无后端的 Valine 评论系统。
 
-[介绍 | Valine 一款快速、简洁且高效的无后端评论系统。](https://valine.js.org/)
+[ Valine 一款快速、简洁且高效的无后端评论系统。](https://valine.js.org/)
 
 ### 获取APP ID 和 APP Key
 
@@ -34,34 +34,15 @@ bing 了几篇 blog，发现配置有点过时了，跟现有的版本有点对�
 
 我使用的评论集成在了`_includes/comment.html`中，所以在这里增加 Valine 模块，如果评论是单独的 html 文件，可以在 _includes 下新建 valine.html，在 ` _layouts/post.html` 中合适地方引入即可
 
+<img src="https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2023-07-27-%E6%88%AA%E5%B1%8F2023-07-27%20%E4%B8%8B%E5%8D%883.55.03.png" style="zoom:150%;" />
+
 ```html
- 39 <!-- 底部锚点 -->
- 40 <a id="htmldown" name="htmldown"></a>
- 41 <!-- 引入评论模块 -->
- 42 {% include comment.html %}
- 43 
- 44 <!-- 引入goto模块 -->
- 45 {% include goto.html %}
- 46 <!-- 引入页面底部模块 -->
- 47 {% include footer.html %}
+ //html代码段可能引起文章布局问题，图片代替
 ```
 
 在 `comment.html` 中增加
 
-```html
- 75  {% if site.valine %}
- 76     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
- 77     <div id="vcomments"></div>
- 78     <script>
- 79       new Valine({
- 80           el: '#vcomments',
- 81           appId: '上面获取',
- 82           appKey: '上面获取'
- 83       })
- 84     </script>
- 85 
- 86 {% endif %}
-```
+![](https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2023-07-27-%E6%88%AA%E5%B1%8F2023-07-27%20%E4%B8%8B%E5%8D%883.56.51.png)
 
 #### config 配置 
 
