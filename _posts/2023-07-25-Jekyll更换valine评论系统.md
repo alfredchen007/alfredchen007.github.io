@@ -7,7 +7,7 @@ date: 2023-07-25
 
 description:  
 
-cover: ’https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2023-07-27-%E6%88%AA%E5%B1%8F2023-07-27%20%E4%B8%8B%E5%8D%884.30.17.png‘
+cover: 'https://jc-1258611203.cos.ap-beijing.myqcloud.com/blog/2023-07-27-%E6%88%AA%E5%B1%8F2023-07-27%20%E4%B8%8B%E5%8D%884.56.44.png'
 
 color: rgb(222,315,333)
 
