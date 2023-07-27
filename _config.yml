@@ -78,8 +78,8 @@ client_secret: ''  # 注册 OAuth Application 后获得的 client_secret
   # You can get your appid and appkey from https://leancloud.app
   # more info please open https://valine.js.org
 valine: true
-appid: 'JHGZSCXVGJ4MmAL3Go5VJ1ex-gzGzoHsz'
-appkey: 'pHvPonFJ8MKZ4xgxlDbvxxFx'
+appid: JHGZSCXVGJ4MmAL3Go5VJ1ex-gzGzoHsz
+appkey: pHvPonFJ8MKZ4xgxlDbvxxFx
 avatar: # gravatar style
 placeholder: 在此处留下你的评论 # comment box placeholder
 pageSize: 10 # pagination size
