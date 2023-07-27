@@ -3,7 +3,7 @@ layout: post
 
 title: "排查zabbix在RHEL8上的启动问题"
 
-date: 2022-11-05 17:30:48 +0300
+date: 2022-11-05 
 
 description:  
 

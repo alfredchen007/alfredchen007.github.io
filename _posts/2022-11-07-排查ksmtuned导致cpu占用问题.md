@@ -3,7 +3,7 @@ layout: post
 
 title: "排查ksmtuned导致cpu占用问题"
 
-date: 2022-11-07 02:50:48 +0300
+date: 2022-11-07  
 
 description:  
 
