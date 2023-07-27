@@ -81,7 +81,7 @@ valine: true
 appid: JHGZSCXVGJ4MmAL3Go5VJ1ex-gzGzoHsz
 appkey: pHvPonFJ8MKZ4xgxlDbvxxFx
 avatar: # gravatar style
-placeholder: '在此处留下你的评论' # comment box placeholder
+placeholder: 在此处留下你的评论 # comment box placeholder
 pageSize: 10 # pagination size
 recordIP: true # 是否记录评论者IP
 enableQQ: false # 是否启用昵称框自动获取QQ昵称和QQ头像, 默认关闭
